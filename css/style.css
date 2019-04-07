@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
+}
+
+main {
+    width: 80%;
+}
+
+.h-alpha, .t-alpha {
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+	color: #362C28;
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: bold;
+}
+
+/**
+* Styling starting from 900px screen width
+**/
+@media (min-width: 900px) { 
+    .h-alpha, .t-alpha {
+        font-size: 3.5rem;
+    }
+}
