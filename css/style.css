@@ -24,7 +24,6 @@ body {
     background-color: #fff969;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .description {
@@ -34,13 +33,16 @@ body {
     position: relative;
 }
 
-.greetings__text {
+.greetings_container {
+    width: 100%;
+}
+
+.greetings_container__text {
     margin: 20px;
     font-family: 'Helvetica', 'Arial', sans-serif; 
 	color: #0E60FF;
-    font-size: 120px;
+    font-size: 90px;
     line-height: 1.25;
-    position: absolute;
 }
 
 .description__text {
@@ -59,21 +61,84 @@ body {
 }
 
 .link:hover {
-    color: aquamarine;
+    color: #0E60FF;
 }
+
 
 /**
  * Tablet Layout
  **/
-@media(min-width: 700px) {
-    .greetings__text {
-        margin-left: 100px;
-        margin-right: 100px;
+ @media(min-width: 600px) {
+    .greetings_container__text {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 140px;
     }
     .description__text {
-        top: -65px;
-        margin-left: 100px;
-        margin-right: 100px;
+        top: -66px;
+        margin-left: 10%;
+        margin-right: 10%;
         font-size: 48px;
+    }
+}
+
+/**
+ * Tablet Layout 2
+ **/
+@media(min-width: 840px) {
+    .greetings_container__text {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+    .description__text {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+}
+
+/**
+ * Desktop Layout
+ **/
+ @media(min-width: 960px) {
+    .greetings {
+        width: 60%;
+        height: 100%;
+        align-items: flex-start;
+    }
+    .description {
+        width: 40%;
+        height: 100%;
+    }
+    .description__text {
+        top: 60%;
+        left: -100px;
+        margin: 20px;
+    }
+    .greetings_container__text {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/**
+ * Desktop Layout 2
+ **/
+ @media(min-width: 1200px) {
+    .greetings_container__text {
+        font-size: 160px;
+    }
+}
+
+/**
+ * Widescreen Layout
+ **/
+ @media(min-width: 1440px) {
+    .description__text {
+        left: -100px;
+        width: 600px;        
+    }
+    .greetings_container__text {
+        font-size: 200px;
+        width: 800px;
     }
 }
