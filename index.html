@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+    TODOs
+    - Display Typeface
+-->
 <html>
     <head>
         <title>Wilhelm Krohmer | Digital Product Designer</title>
@@ -7,16 +11,26 @@
         <meta name="description" content="Wilhelm Krohmer | Digital Product Designer">
         <meta name="author" content="Wilhelm Krohmer">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
     </head>
     <body>
-        <main>
-            <h1 class="h-alpha">Hi!</h1>
-            <p class="t-alpha">My name is Wilhelm Krohmer. 
-                I <a href="https://www.behance.net/wilkro">design</a>, 
-                <a href="https://vimeo.com/100792748">dance</a>, 
-                <a href="https://codepen.io/wilkro/">code</a> &#38; 
-                <a href="https://wilhelmkrohmer.tumblr.com/">observe</a>.
+        <div class="greetings-container">
+            <div class="greetings">
+                <h1 class="greetings__text">Moin, moin!</h1>
+            </div>
+        </div>
+        <div class="description">
+            <p class="description__text large-font base-font">
+                My name is 
+                <a class="link" href="https://www.xing.com/profile/Wilhelm_Krohmer" target="new">Wilhelm Krohmer</a>. 
+                I <a class="link" href="https://www.behance.net/wilkro" target="new">design</a>, 
+                <a class="link" href="https://vimeo.com/334477258" target="new">dance</a>, 
+                <a class="link" href="https://github.com/WilhelmKrohmer" target="new">code</a> &#38; 
+                <a class="link" href="https://wilhelmkrohmer.tumblr.com/" target="new">observe</a>.
             </p>
-        </main>
+        </div>
+        <a id="impressum" class="link copy base-font" href="impressum.html">Impressum</a>
+        <script src="js/greetings.js"></script>
     </body>
 </html>
