@@ -1,11 +1,7 @@
-/**
- * General Styling
- **/
+/* General Styling */
 * {
     box-sizing: border-box; 
 }
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 html, body {
     height: 100%;
@@ -17,42 +13,67 @@ body {
     margin: 0;
 }
 
-.headline {
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+.base-font {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
 	color: #362C28;
+}
+
+.greetings__text {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
+    color: #0E60FF;
+    font-size: 90px;
+    line-height: 1.25;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.large-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
     font-size: 42px;
     line-height: 1.25;
     font-weight: 700;
+    font-style: normal;
 }
 
-.sub_headline {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
-	color: #362C28;
+.middle-font {
     font-size: 22px;
     line-height: 1.25;
     font-weight: 700;
 }
 
 .copy {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
-	color: #362C28;
     font-size: 18px;
     line-height: 1.25;
     font-weight: 400;
 }
 
-/**
- * Mobile Layout
- **/
+.link {
+    color: black;
+}
 
- .content {
+.link:hover {
+    color: #0E60FF;
+}
+
+/* Only for impressum */
+.content {
     width: 100%;
     height: 70%;
     padding: 20px;
     background-color: #fff969;
 }
 
-.greetings {
+#impressum {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Mobile Layout */
+.greetings-container {
     width: 100%;
     height: 60%;
     background-color: #fff969;
@@ -67,16 +88,12 @@ body {
     position: relative;
 }
 
-.greetings_container {
+.greetings {
     width: 100%;
 }
 
-.greetings_container__text {
+.greetings__text {
     margin: 20px;
-    font-family: 'Helvetica', 'Arial', sans-serif; 
-	color: #0E60FF;
-    font-size: 90px;
-    line-height: 1.25;
 }
 
 .description__text {
@@ -85,29 +102,14 @@ body {
     position: absolute;
 }
 
-.link {
-    color: black;
-}
-
-.link:hover {
-    color: #0E60FF;
-}
-
-#impressum {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-/**
- * Tablet Layout
- **/
+/* Tablet Layout */
  @media(min-width: 600px) {
-    .greetings_container__text {
+    .greetings__text {
         margin-left: 10%;
         margin-right: 10%;
         font-size: 140px;
     }
+
     .description__text {
         top: -66px;
         margin-left: 10%;
@@ -116,62 +118,55 @@ body {
     }
 }
 
-/**
- * Tablet Layout 2
- **/
+/* Bigger Tablet Layout */
 @media(min-width: 840px) {
-    .greetings_container__text {
-        margin-left: 18%;
-        margin-right: 18%;
-    }
+    .greetings__text,
     .description__text {
         margin-left: 18%;
         margin-right: 18%;
     }
 }
 
-/**
- * Desktop Layout
- **/
+/* Desktop Layout */
  @media(min-width: 960px) {
-    .greetings {
+    .greetings-container {
         width: 60%;
         height: 100%;
         align-items: flex-start;
     }
+
     .description {
         width: 40%;
         height: 100%;
     }
+
     .description__text {
         top: 60%;
         left: -100px;
         margin: 20px;
     }
-    .greetings_container__text {
+
+    .greetings__text {
         margin-left: 50px;
         margin-right: 50px;
     }
 }
 
-/**
- * Desktop Layout 2
- **/
+/* Bigger Desktop Layout */
  @media(min-width: 1200px) {
-    .greetings_container__text {
+    .greetings__text {
         font-size: 160px;
     }
 }
 
-/**
- * Widescreen Layout
- **/
+/* Widescreen Layout */
  @media(min-width: 1440px) {
     .description__text {
         left: -100px;
         width: 600px;        
     }
-    .greetings_container__text {
+
+    .greetings__text {
         font-size: 200px;
         width: 800px;
     }

@@ -1,9 +1,9 @@
-let greeting = document.getElementById('greeting');
+let greeting = document.querySelector('.greetings__text');
 
 /**
- * Array for greetings in different languages.
+ * Array for possible greetings in different languages.
  **/
-let greetings = [
+let possibleGreetings = [
     "Moin, moin!", 
     "Hey there!", 
     "Ciao ciao!", 
@@ -17,13 +17,12 @@ let greetings = [
 ];
 
 /**
- * This function takes a string out of the greetings array 
- * and replaces the text inside 'greeting'. 
+ * Replace text inside 'greeting' element with
+ * random possibleGreetings array item
  **/
 function setGreeting() {
-    // Generate random number for greetings array and apply to greeting
-    let randomGreetingNumber = Math.floor((Math.random() * greetings.length));
-    greeting.textContent = greetings[randomGreetingNumber];
+    let randomGreetingIndex = Math.floor((Math.random() * possibleGreetings.length));
+    greeting.textContent = possibleGreetings[randomGreetingIndex];
 }
 
 window.onload = setGreeting();
