@@ -1,91 +1,10 @@
-/* General Styling */
-* {
-    box-sizing: border-box; 
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0;
-}
-
-/* Typography */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-
-.base-font {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
-	color: #362C28;
-}
-
-.greetings__text {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
-    color: #0E60FF;
-    font-size: 90px;
-    line-height: 1.25;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.large-font {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
-    font-size: 42px;
-    line-height: 1.25;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.middle-font {
-    font-size: 22px;
-    line-height: 1.25;
-    font-weight: 700;
-}
-
-.copy {
-    font-size: 18px;
-    line-height: 1.25;
-    font-weight: 400;
-}
-
-.link {
-    color: black;
-}
-
-.link:hover {
-    color: #0E60FF;
-}
-
-/* Only for impressum */
-.content {
-    width: 100%;
-    height: 70%;
-    padding: 20px;
-    background-color: #fff969;
-}
-
-#impressum {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-/* Mobile Layout */
+/* Mobile page styling */
 .greetings-container {
     width: 100%;
-    height: 60%;
+    height: 66%;
     background-color: #fff969;
     display: flex;
     align-items: center;
-}
-
-.description {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    position: relative;
 }
 
 .greetings {
@@ -93,46 +12,83 @@ body {
 }
 
 .greetings__text {
+    font-family: 'Mikro-Bold', 'Roboto', 'Helvetica', 'Arial', sans-serif; 
+    color: #0E60FF;
+    font-size: 70px;
+    line-height: 1.25;
+    font-style: normal;
     margin: 20px;
 }
 
+.description {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    position: relative;
+}
+
 .description__text {
-    top: -60px;
+    top: -58px;
     margin: 20px;
     position: absolute;
 }
 
-/* Tablet Layout */
- @media(min-width: 600px) {
+.impressum__text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* Increase font-size dynamically on mobile screens */
+@media screen and (min-width: 300px) {
+
     .greetings__text {
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 140px;
+        font-size: 23vw;
     }
 
-    .description__text {
-        top: -66px;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-size: 48px;
-    }
 }
 
-/* Bigger Tablet Layout */
-@media(min-width: 840px) {
-    .greetings__text,
-    .description__text {
-        margin-left: 18%;
-        margin-right: 18%;
-    }
-}
 
-/* Desktop Layout */
- @media(min-width: 960px) {
+/* Tablet layout */
+ @media screen and (min-width: 600px) {
+
     .greetings-container {
-        width: 60%;
+        height: 75%;
+    }
+
+    /* scales the font-size between a minimum and a maximum, based on browser width
+        calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) 
+        / ([maximum viewport width] - [minimum viewport width])))
+    **/
+    .greetings__text {
+        font-size: calc(70px + (150 - 70) * ((100vw - 300px) / (900 - 300)));
+    }
+
+    .description {
+        height: 25%;
+    }
+
+    .description__text {
+        width: 70%;
+    }
+
+}
+
+
+/* Desktop layout */
+ @media screen and (min-width: 960px) {
+    .greetings-container {
+        width: 50%;
         height: 100%;
         align-items: flex-start;
+    }
+
+    .greetings__text {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 100px; /*Fallback*/
+        font-size: calc(100px + (160 - 100) * ((100vw - 960px) / (1600 - 960))); /*See scale explanation in tablet layout*/
     }
 
     .description {
@@ -142,32 +98,15 @@ body {
 
     .description__text {
         top: 60%;
-        left: -100px;
+        left: -90px;
+        width: 100%;
         margin: 20px;
     }
 
-    .greetings__text {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
 }
 
-/* Bigger Desktop Layout */
- @media(min-width: 1200px) {
+@media screen and (min-width: 1600px) {
     .greetings__text {
         font-size: 160px;
     }
-}
-
-/* Widescreen Layout */
- @media(min-width: 1440px) {
-    .description__text {
-        left: -100px;
-        width: 600px;        
-    }
-
-    .greetings__text {
-        font-size: 200px;
-        width: 800px;
-    }
-}
+} 

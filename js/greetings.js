@@ -25,4 +25,4 @@ function setGreeting() {
     greeting.textContent = possibleGreetings[randomGreetingIndex];
 }
 
-window.onload = setGreeting();
+//window.onload = setGreeting();

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Mikro-Bold';
+    src: url('../fonts/Mikro-Bold.otf') format('opentype');
+}
+
+.base-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; 
+	color: #362C28;
+}
+
+.large-font {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.middle-font {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.copy {
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: #0E60FF;
+}
