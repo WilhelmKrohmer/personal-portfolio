@@ -20,12 +20,8 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/SourceSansPro-Regular.otf') format('opentype'),
-         url('../fonts/SourceSansPro-Regular.otf.woff') format('woff'),
-         url('../fonts/SourceSansPro-Regular.otf.woff2') format('woff2'),   
-         url('../fonts/SourceSansPro-Regular.ttf') format('truetype'),
-         url('../fonts/SourceSansPro-Regular.ttf.woff') format('woff'),
-         url('../fonts/SourceSansPro-Regular.ttf.woff2') format('woff2');
+    src: url('../fonts/SourceSansPro-Regular.otf.woff') format('woff'),
+         url('../fonts/SourceSansPro-Regular.otf.woff2') format('woff2');
 }
 
 @font-face {
@@ -33,7 +29,8 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/SourceSansPro-Semibold.otf.woff') format('woff');
+    src: url('../fonts/SourceSansPro-Semibold.otf.woff') format('woff'),
+         url('../fonts/SourceSansPro-SemiboldIt.otf.woff2') format('woff2');
 }
 
 .font-base {
