@@ -1,0 +1,17 @@
+# Rewrite http to https
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Use HTTP Strict Transport Security to force client to use secure connections only 
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+
+# Block embedding in iframes and similar on third-party sites (old browsers)
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Protection against clickjacking attacks
+Header always set X-Content-Type-Options: nosniff
+
+# Control loading of resources (css or js) and embedding on third-party sites
+Header always set Content-Security-Policy "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"

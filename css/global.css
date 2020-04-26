@@ -1,0 +1,14 @@
+/* Global styling for index and impressum */
+* {
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+}
