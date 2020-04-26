@@ -12,12 +12,10 @@
 }
 
 .greetings__text {
-    font-family: 'Mikro-Bold', 'Roboto', 'Helvetica', 'Arial', sans-serif; 
     color: #0E60FF;
-    font-size: 70px;
-    line-height: 1.25;
-    font-style: normal;
-    margin: 20px;
+    font-size: 4em;
+    margin: 30px;
+    letter-spacing: -0.05em;
 }
 
 .description {
@@ -28,8 +26,9 @@
 }
 
 .description__text {
-    top: -58px;
-    margin: 20px;
+    font-size: 1.75em;
+    top: -60px;
+    margin: 30px;
     position: absolute;
 }
 
@@ -43,8 +42,13 @@
 /* Increase font-size dynamically on mobile screens */
 @media screen and (min-width: 300px) {
 
+    /* 
+    scales the font-size between a minimum and a maximum, based on browser width
+        calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) 
+        / ([maximum viewport width] - [minimum viewport width])))
+    **/
     .greetings__text {
-        font-size: 23vw;
+        font-size: calc(65px + (100 - 65) * ((100vw - 300px) / (600 - 300)));
     }
 
 }
@@ -57,12 +61,11 @@
         height: 75%;
     }
 
-    /* scales the font-size between a minimum and a maximum, based on browser width
-        calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) 
-        / ([maximum viewport width] - [minimum viewport width])))
-    **/
     .greetings__text {
-        font-size: calc(70px + (150 - 70) * ((100vw - 300px) / (900 - 300)));
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 6.25em; /*Fallback*/
+        font-size: calc(100px + (160 - 100) * ((100vw - 600px) / (960 - 600))); /*See scale explanation in tablet layout*/
     }
 
     .description {
@@ -70,7 +73,10 @@
     }
 
     .description__text {
-        width: 70%;
+        font-size: 2em;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 60%;
     }
 
 }
@@ -85,28 +91,27 @@
     }
 
     .greetings__text {
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 100px; /*Fallback*/
+        font-size: 6.25em; /*Fallback*/
         font-size: calc(100px + (160 - 100) * ((100vw - 960px) / (1600 - 960))); /*See scale explanation in tablet layout*/
     }
 
     .description {
-        width: 40%;
+        width: 50%;
         height: 100%;
     }
 
     .description__text {
+        font-size: 2.5em;
         top: 60%;
         left: -90px;
         width: 100%;
-        margin: 20px;
+        max-width: 14em;
     }
 
 }
 
 @media screen and (min-width: 1600px) {
     .greetings__text {
-        font-size: 160px;
+        font-size: 10em;
     }
 } 
