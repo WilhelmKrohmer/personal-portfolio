@@ -10,32 +10,65 @@
     <meta name="theme-color" content="#fff969" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="referrer" content="no-referrer">
-    <link rel="stylesheet" href="css/fontstyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/startpage.css" rel="stylesheet">
+    
+    <link href="css/styles.css" rel="stylesheet">
+    <!--
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/startpage.css" rel="stylesheet">
+    -->
     <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" sizes="192x192" href="apple-touch-icon.png">
 </head>
 
 <body>
-    <div class="greetings-container">
-        <div class="greetings">
-            <h1 class="greetings__text display font-base">Buenos días!</h1>
-        </div>
-    </div>
-    <div class="description">
-        <p class="description__text display font-base">
-            My name is
-            <a class="link" href="https://www.xing.com/profile/Wilhelm_Krohmer" target="new">Wilhelm Krohmer</a>.
-            I <a class="link" href="https://www.behance.net/wilkro" target="new">design</a>,
+    <header class="greetings-container">
+        <h1 class="greetings__text welcome-text">Buenos días!</h1>
+        <p class="welcome-description">
+            My name is Wilhelm Krohmer.
+            I <a class="link" href="#stories">design</a>,
             <a class="link" href="https://vimeo.com/334477258" target="new">dance</a>,
             <a class="link" href="https://github.com/WilhelmKrohmer" target="new">code</a> &#38;
             <a class="link" href="https://wilhelmkrohmer.tumblr.com/" target="new">observe</a>.
         </p>
-    </div>
-    <a class="impressum__text link font-base" href="impressum.html">Imprint & Privacy</a>
-    <script src="js/greetings.js"></script>
+    </header>
+    <main>
+        <section id="stories">
+            <h2>Stories</h2>
+            <article>
+                <picture>
+                    <img src="" alt="">
+                </picture>
+                <h3>Nailing the basics: mobile navigation</h3>
+                <p>
+                    With increasing complexity of mobile apps, 
+                    having a simple navigation has never been more important. 
+                    Joining the otelo app team I redesigned their navigation, 
+                    improving the overall app architecture in the process.
+                </p>
+                <a href="">Read this story --></a>
+            </article>
+        </section>
+        <section>
+            <h2>About me</h2>
+            <p>
+                My name is Wilhelm Krohmer. 
+                I am a digital product designer and dancer. 
+                As a designer I want to create web and mobile apps 
+                that care about the users people using them. 
+                Products should be fun, enable people to solve their problems 
+                and make them feel comfortable. As such I strive for ethical, 
+                inclusive and privacy-focused products with a clear vision.
+            </p>
+            <p>In my free time I practice dancing, photography, coding and speaking various languages.</p>
+            <a href="">Learn more --></a>
+        </section>
+    </main>    
+    <footer>
+            <p>No tracking — <a class="impressum__text link" href="impressum.html">Imprint & Privacy</a></p>
+    </footer>
+    
+    <!--<script src="js/greetings.js"></script>-->
 </body>
 
 </html>

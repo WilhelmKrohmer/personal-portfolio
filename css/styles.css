@@ -1,0 +1,167 @@
+/* CONTENT
+    * Color styles
+    * Box shadows
+    * Spacing units
+    * Typography
+*/
+
+:root {
+    /*Color styles*/
+    --color-primary: #0E60FF;
+    --color-secondary: #FFF969;
+    --color-black: #000000;
+    --color-dark-grey: #666666;
+    --color-light-grey: #CCCCCC;
+    --color-white: #FFFFFF;
+
+    /*Box shadows*/
+    --box-shadow-01: 4px 4px 0px var(--color-black);
+    --box-shadow-02: 8px 8px 0px var(--color-black);
+
+    /*Spacing units*/
+    --spacing-01: 5px;
+    --spacing-02: calc(var(--spacing-01)*2);
+    --spacing-03: calc(var(--spacing-01)*3);
+    --spacing-04: calc(var(--spacing-01)*4);
+    --spacing-05: calc(var(--spacing-01)*5);
+    --spacing-06: calc(var(--spacing-01)*6);
+    --spacing-07: calc(var(--spacing-01)*7);
+    --spacing-08: calc(var(--spacing-01)*8);
+    --spacing-09: calc(var(--spacing-01)*9);
+    --spacing-10: calc(var(--spacing-01)*10);
+}
+
+/* TYPOGRAPHY */
+
+/* Webfonts: Copyright © Letters From Sweden. All rights reserved. 
+To obtain a license, please see: https://lettersfromsweden.se */
+@font-face {
+    font-family: 'Mikro';
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/Mikro-Black.otf') format('opentype');  
+}
+
+/*
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+See license at: http://scripts.sil.org/OFL
+See font at: https://github.com/rsms/inter 
+*/
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: oblique 0deg 10deg;
+    src: url("../fonts/Inter.var.woff2?v=3.15") format("woff2-variations");
+  }
+
+/*Basic typographic settings*/
+body {
+    font-family: 'Inter var', 'Helvetica', 'Trebuchet MS', 'Arial', sans-serif;
+    font-synthesis: none;
+    font-feature-settings: 'zero' on, 'ordn' on, 'ss01' on, 'ss02' on, 'ss03' on, 'cv01' on, 'cv10' on;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Font styles*/
+.welcome-text {
+    font-family: 'Mikro';
+    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    font-size: 4.375rem; /*70px*/
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.welcome-description {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.563rem; /*25px*/
+    line-height: 1.2;
+    color: var(--color-black);
+}
+
+.welcome-description > a {
+    font-style: oblique 10deg;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.welcome-description > a:hover {
+    text-decoration: underline;
+}
+
+.display-1 {
+    font-family: 'Mikro';
+    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    font-size: 3.438rem; /*55px*/
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.display-2 {
+    font-family: 'Mikro';
+    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    font-size: 2.188rem; /*35px*/
+    line-height: 1.25;
+    color: var(--color-black);
+}
+
+.display-3 {
+    font-family: 'Mikro';
+    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    font-size: 1.563rem; /*25px*/
+    line-height: 1.25;
+    color: var(--color-black);
+}
+
+.display-4 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+.body-1-short {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+.body-1-long {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+.body-2-short {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+.body-2-black {
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+}
+
+.link {
+    font-style: oblique 10deg;
+    color: var(--color-black);
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
