@@ -153,7 +153,6 @@ body {
     line-height: 1.75;
     letter-spacing: 0.01em;
     color: var(--color-black);
-    max-width: 60ch; /*Allows max ~60 characters in one line*/
 }
 
 .body-2-short {
@@ -178,4 +177,9 @@ body {
 
 .link:hover {
     color: var(--color-primary);
+}
+
+.link:focus {
+    color: var(--color-primary);
+    text-decoration: underline;
 }

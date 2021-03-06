@@ -1,8 +1,5 @@
 /* Mobile page styling */
 .greetings-container {
-    width: 100vw;
-    height: 66vh;
-    background-color: #fff969;
     display: flex;
 }
 
