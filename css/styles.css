@@ -40,7 +40,8 @@ To obtain a license, please see: https://lettersfromsweden.se */
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/Mikro-Black.otf') format('opentype');  
+    src: url('../fonts/Mikro-Black.otf') format('opentype');
+    font-display: swap;
 }
 
 /*
@@ -58,7 +59,7 @@ See font at: https://github.com/rsms/inter
 
 /*Basic typographic settings*/
 body {
-    font-family: 'Inter var', 'Helvetica', 'Trebuchet MS', 'Arial', sans-serif;
+    font-family: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-synthesis: none;
     font-feature-settings: 'zero' on, 'ordn' on, 'ss01' on, 'ss02' on, 'ss03' on, 'cv01' on, 'cv10' on;
     text-rendering: optimizeLegibility;
@@ -66,11 +67,29 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/*Font styles*/
-.welcome-text {
+/*Text styles*/
+
+/*Defines all styles that use Mikro font*/
+.welcome-text, .display-1, .display-2, .display-3 {
     font-family: 'Mikro';
     font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
-    font-size: 4.375rem; /*70px*/
+    color: var(--color-black);
+}
+
+.welcome-text {
+    /*Properties for type scaling*/
+    --font-size-min: 4.375rem; /*70px*/
+    --font-size-max: 7.5rem; /*120px*/
+    --font-size-scaling: 15vw; 
+    
+    /*Fallback font-size*/
+    font-size: var(--font-size-min);
+    /*Scales the font between a minimum and maximum*/
+    font-size: clamp(
+        var(--font-size-min),
+        calc(1rem + var(--font-size-scaling)), 
+        var(--font-size-max)
+        );
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -96,8 +115,6 @@ body {
 }
 
 .display-1 {
-    font-family: 'Mikro';
-    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
     font-size: 3.438rem; /*55px*/
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -105,19 +122,13 @@ body {
 }
 
 .display-2 {
-    font-family: 'Mikro';
-    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
     font-size: 2.188rem; /*35px*/
     line-height: 1.25;
-    color: var(--color-black);
 }
 
 .display-3 {
-    font-family: 'Mikro';
-    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
     font-size: 1.563rem; /*25px*/
     line-height: 1.25;
-    color: var(--color-black);
 }
 
 .display-4 {
@@ -128,6 +139,7 @@ body {
     color: var(--color-black);
 }
 
+/*Only used for short paragraphs, up to 3 lines*/
 .body-1-short {
     font-size: 1rem;
     line-height: 1.5;
@@ -135,11 +147,13 @@ body {
     color: var(--color-black);
 }
 
+/*Only used for long paragraphs, with optimized readability*/
 .body-1-long {
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.01em;
     color: var(--color-black);
+    max-width: 60ch; /*Allows max ~60 characters in one line*/
 }
 
 .body-2-short {
