@@ -1,6 +1,8 @@
 /* CONTENTS
     * Basic layout settings
     * Global component styling
+        * Button
+        * Footer
 */
 
 /*BASIC LAYOUT SETTINGS*/
@@ -45,9 +47,8 @@ footer {
     width: 100vw;
     background-color: var(--color-secondary);
     padding: var(--spacing-03) var(--spacing-04);
-    margin-top: var(--spacing-08);
 }
 
-footer > p {
+footer p {
     margin: 0;
 }

@@ -1,112 +1,26 @@
-/* Mobile page styling */
-.greetings-container {
-    display: flex;
+main {
+    padding: 
+        var(--spacing-06)
+        var(--spacing-04) 
+        var(--spacing-08)
+        var(--spacing-04);
 }
 
-.greetings {
-    width: 100%;
+#stories h2 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-04);
 }
 
-.greetings__text {
-    color: #0E60FF;
-    font-size: 4em;
-    margin: 30px;
-    letter-spacing: -0.05em;
+#about h2 {
+    margin-top: var(--spacing-06);
+    margin-bottom: var(--spacing-04);
 }
 
-.description {
-    width: 100%;
-    height: 33%;
-    display: flex;
-    position: relative;
+#about p {
+    margin-top: var(--spacing-02);
+    margin-bottom: 0;
 }
 
-.description__text {
-    font-size: 1.75em;
-    margin: 30px;
-    position: absolute;
+#about a {
+    margin-top: var(--spacing-05);
 }
-
-.impressum__text {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-
-/* Increase font-size dynamically on mobile screens */
-@media screen and (min-width: 300px) {
-
-    /* 
-    scales the font-size between a minimum and a maximum, based on browser width
-        calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) 
-        / ([maximum viewport width] - [minimum viewport width])))
-    **/
-    .greetings__text {
-        font-size: calc(65px + (100 - 65) * ((100vw - 300px) / (600 - 300)));
-    }
-
-}
-
-
-/* Tablet layout */
- @media screen and (min-width: 600px) {
-
-    .greetings-container {
-        height: 75%;
-    }
-
-    .greetings__text {
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 6.25em; /*Fallback*/
-        font-size: calc(100px + (160 - 100) * ((100vw - 600px) / (960 - 600))); /*See scale explanation in tablet layout*/
-    }
-
-    .description {
-        height: 25%;
-    }
-
-    .description__text {
-        font-size: 2em;
-        margin-left: 50px;
-        margin-right: 50px;
-        width: 60%;
-    }
-
-}
-
-
-/* Desktop layout */
- @media screen and (min-width: 960px) {
-    .greetings-container {
-        width: 50%;
-        height: 100%;
-        align-items: flex-start;
-    }
-
-    .greetings__text {
-        font-size: 6.25em; /*Fallback*/
-        font-size: calc(100px + (160 - 100) * ((100vw - 960px) / (1600 - 960))); /*See scale explanation in tablet layout*/
-    }
-
-    .description {
-        width: 50%;
-        height: 100%;
-    }
-
-    .description__text {
-        font-size: 2.5em;
-        top: 60%;
-        left: -90px;
-        width: 100%;
-        max-width: 14em;
-    }
-
-}
-
-@media screen and (min-width: 1600px) {
-    .greetings__text {
-        font-size: 10em;
-    }
-} 

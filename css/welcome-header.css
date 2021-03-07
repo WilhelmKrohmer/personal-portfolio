@@ -11,12 +11,12 @@
     background-color: #fff969;
 }
 
-.welcome-header > h1 {
+.welcome-header h1 {
     max-width: 20ch;
     margin: 0;
 }
 
-.welcome-header > p {
+.welcome-header p {
     max-width: 20ch;
     margin: 0;
 }

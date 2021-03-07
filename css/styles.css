@@ -104,13 +104,13 @@ body {
     color: var(--color-black);
 }
 
-.welcome-description > a {
+.welcome-description a {
     font-style: oblique 10deg;
     color: var(--color-primary);
     text-decoration: none;
 }
 
-.welcome-description > a:hover {
+.welcome-description a:hover {
     text-decoration: underline;
 }
 
