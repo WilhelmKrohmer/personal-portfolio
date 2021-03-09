@@ -15,6 +15,12 @@ html, body {
     margin: 0;
 }
 
+:root {
+    /*Breakpoints*/
+    --breakpoint-tablet: 600px;
+    --breakpoint-desktop: 1024px;
+}
+
 /*GLOBAL COMPONENT STYLING*/
 
 /*Button*/

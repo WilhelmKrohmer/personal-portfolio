@@ -1,0 +1,49 @@
+/* Mobile layout */
+main {
+    margin: 
+        var(--spacing-06)
+        var(--spacing-04) 
+        var(--spacing-08)
+        var(--spacing-04);
+}
+
+.stories-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+section h2 {
+    margin-top: var(--spacing-06);
+    margin-bottom: var(--spacing-04);
+}
+
+#about p {
+    margin-top: var(--spacing-02);
+    margin-bottom: 0;
+}
+
+#about a {
+    margin-top: var(--spacing-05);
+}
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+
+    main {
+        margin: var(--spacing-10);
+    }
+
+}
+
+/* Desktop layout */
+@media screen and (min-width: 1024px) {
+
+    main {
+        margin-left: 30%;
+        padding-left: 50px;
+    }
+}
