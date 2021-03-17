@@ -96,6 +96,28 @@ body {
     color: var(--color-primary);
 }
 
+/* Welcome Text Scaling on Desktop */
+@media screen and (min-width: 1024px) {
+
+    .welcome-text {
+        /*Properties for type scaling*/
+        --font-size-min: 3.438rem; /*55px*/
+        --font-size-max: 5rem; /*80px*/
+        --font-size-scaling: 4.5vw; 
+        
+        /*Fallback font-size*/
+        font-size: var(--font-size-min);
+        /*Scales the font between a minimum and maximum*/
+        font-size: clamp(
+            var(--font-size-min),
+            calc(1rem + var(--font-size-scaling)), 
+            var(--font-size-max)
+            );
+    }
+
+}
+
+
 .welcome-description {
     font-style: normal;
     font-weight: 600;

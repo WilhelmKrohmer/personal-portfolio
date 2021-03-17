@@ -15,12 +15,6 @@ html, body {
     margin: 0;
 }
 
-:root {
-    /*Breakpoints*/
-    --breakpoint-tablet: 600px;
-    --breakpoint-desktop: 1024px;
-}
-
 /*GLOBAL COMPONENT STYLING*/
 
 /*Button*/
@@ -50,11 +44,35 @@ html, body {
 
 /*Footer*/
 footer {
-    width: 100vw;
+    width: 100%;
     background-color: var(--color-secondary);
     padding: var(--spacing-03) var(--spacing-04);
 }
 
 footer p {
     margin: 0;
+}
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+
+    footer {
+        padding-left: var(--spacing-10);
+        padding-right: var(--spacing-10);
+    }
+
+}
+
+/* Desktop footer layout */
+@media screen and (min-width: 1024px) {
+
+    footer {
+        width: 70%;
+        margin-left: 30%;
+        background-color: var(--color-white);
+    }
+
+    footer p {
+        text-align: right;
+    }
 }

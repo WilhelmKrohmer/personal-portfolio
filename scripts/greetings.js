@@ -1,4 +1,4 @@
-let greeting = document.querySelector('.greetings__text');
+let greeting = document.querySelector('.welcome-text');
 
 /**
  * Array for possible greetings in different languages.
