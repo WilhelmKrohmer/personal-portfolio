@@ -1,0 +1,22 @@
+/*
+    Keyfacts represent the most important quick facts 
+    about a story. 
+*/
+
+.keyfacts {
+    outline: 1px solid var(--color-light-grey);
+    padding: 20px;
+}
+
+.keyfacts dt {
+    color: var(--color-primary);
+}
+
+.keyfacts dd {
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+.keyfacts :last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,9 @@
+.subpage-header {
+    background-color: var(--color-secondary);
+    height: 52px;
+    padding: 0 var(--spacing-04);
+}
+
+.subpage-header .button {
+    margin-top: 30px;
+}
