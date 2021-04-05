@@ -1,8 +1,12 @@
 /* CONTENTS
     * Basic layout settings
+        * Box-Sizing
+        * Html & Body Reset
+        * Main Tag margins
     * Global component styling
         * Button
         * Footer
+    * Accessibility
 */
 
 /*BASIC LAYOUT SETTINGS*/
@@ -11,8 +15,25 @@
 }
 
 html, body {
+    scroll-behavior: smooth;
     height: 100%;
     margin: 0;
+}
+
+main {
+    margin-left: var(--margin-main-horizontal);
+    margin-right: var(--margin-main-horizontal);
+    margin-bottom: var(--margin-main-vertical);
+}
+
+/* Main margins for tablet */
+@media screen and (min-width: 600px) {
+
+    main {
+        --margin-main-horizontal: var(--spacing-10);
+        --margin-main-vertical: var(--spacing-10);
+    }
+
 }
 
 /*GLOBAL COMPONENT STYLING*/
@@ -27,19 +48,33 @@ html, body {
     background-color: var(--color-primary);
     color: var(--color-white);
     box-shadow: var(--box-shadow-01);
-    transition: all .125s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .button:hover {
+    transition: all .125s ease;
     transform: translate(-4px, -4px);
     box-shadow: var(--box-shadow-02);
 }
 
+.button:active {
+    background-color: var(--color-primary-dark);
+}
+
 .button:focus {
-    outline: 3px solid var(--color-secondary);
-    outline-offset: -3px;
+    background-color: var(--color-primary-dark);
     transform: translate(-4px, -4px);
     box-shadow: var(--box-shadow-02);
+}
+
+.trailing-icon::after {
+    content: "-->";
+    margin-left: var(--spacing-01);
+}
+
+.leading-icon::before {
+    content: "<--";
+    margin-right: var(--spacing-01);
 }
 
 /*Footer*/
@@ -68,6 +103,8 @@ footer p {
 
     footer {
         width: 70%;
+        padding-left: var(--spacing-05);
+        padding-right: var(--spacing-05);
         margin-left: 30%;
         background-color: var(--color-white);
     }
@@ -76,3 +113,14 @@ footer p {
         text-align: right;
     }
 }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .button:hover {
+        transform: none;
+        box-shadow: var(--box-shadow-01);
+        background-color: var(--color-primary-dark);
+    }
+
+  }

@@ -2,7 +2,7 @@ article {
     max-width: 60ch;
 }
 
-/* Tablet layout */
+/* Tablet Layout */
 @media screen and (min-width: 700px) {
 
     main {
@@ -12,7 +12,7 @@ article {
 
 }
 
-/* Desktop Layout */
+/* Desktop layout */
 @media screen and (min-width: 1024px) {
 
     article {

@@ -3,11 +3,13 @@
     * Box shadows
     * Spacing units
     * Typography
+    * Article elements
 */
 
 :root {
     /*Color styles*/
     --color-primary: #0E60FF;
+    --color-primary-dark: #004BDB;
     --color-secondary: #FFF969;
     --color-black: #000000;
     --color-dark-grey: #666666;
@@ -29,6 +31,12 @@
     --spacing-08: calc(var(--spacing-01)*8);
     --spacing-09: calc(var(--spacing-01)*9);
     --spacing-10: calc(var(--spacing-01)*10);
+}
+
+/*Horizontal margin used in main tag on all pages*/
+main {
+    --margin-main-horizontal: var(--spacing-04);
+    --margin-main-vertical: var(--spacing-08);
 }
 
 /* TYPOGRAPHY */
@@ -61,7 +69,21 @@ See font at: https://github.com/rsms/inter
 body {
     font-family: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-synthesis: none;
-    font-feature-settings: 'zero' on, 'ordn' on, 'ss01' on, 'ss02' on, 'ss03' on, 'cv01' on, 'cv10' on;
+    --font-feature-settings-value:
+        'liga' on,
+        'kern' on,
+        'calt' on,
+        'zero' on, 
+        'ordn' on, 
+        'ss01' on, 
+        'ss02' on, 
+        'ss03' on, 
+        'cv01' on, 
+        'cv10' on;
+    -webkit-font-feature-settings: var(--font-feature-settings-value);
+    -moz-font-feature-settings: var(--font-feature-settings-value);
+    -ms-font-feature-settings: var(--font-feature-settings-value);
+    font-feature-settings: var(--font-feature-settings-value);
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -70,70 +92,24 @@ body {
 /*Text styles*/
 
 /*Defines all styles that use Mikro font*/
-.welcome-text, .display-1, .display-2, .display-3 {
+.display-1, .display-2, .display-3 {
     font-family: 'Mikro';
-    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    --font-feature-settings-value:
+        'liga' on,
+        'kern' on,
+        'tnum' on, 
+        'lnum' on, 
+        'zero' on, 
+        'ordn' on, 
+        'ss02' on, 
+        'ss03' on;
+    -webkit-font-feature-settings: var(--font-feature-settings-value);
+    -moz-font-feature-settings: var(--font-feature-settings-value);
+    -ms-font-feature-settings: var(--font-feature-settings-value);
+    font-feature-settings: var(--font-feature-settings-value);
+    margin-top: var(--spacing-08);
+    margin-bottom: var(--spacing-04);
     color: var(--color-black);
-}
-
-.welcome-text {
-    /*Properties for type scaling*/
-    --font-size-min: 4.375rem; /*70px*/
-    --font-size-max: 7.5rem; /*120px*/
-    --font-size-scaling: 15vw; 
-    
-    /*Fallback font-size*/
-    font-size: var(--font-size-min);
-    /*Scales the font between a minimum and maximum*/
-    font-size: clamp(
-        var(--font-size-min),
-        calc(1rem + var(--font-size-scaling)), 
-        var(--font-size-max)
-        );
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: var(--color-primary);
-}
-
-/* Welcome Text Scaling on Desktop */
-@media screen and (min-width: 1024px) {
-
-    .welcome-text {
-        /*Properties for type scaling*/
-        --font-size-min: 3.438rem; /*55px*/
-        --font-size-max: 5rem; /*80px*/
-        --font-size-scaling: 4.5vw; 
-        
-        /*Fallback font-size*/
-        font-size: var(--font-size-min);
-        /*Scales the font between a minimum and maximum*/
-        font-size: clamp(
-            var(--font-size-min),
-            calc(1rem + var(--font-size-scaling)), 
-            var(--font-size-max)
-            );
-    }
-
-}
-
-
-.welcome-description {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.563rem; /*25px*/
-    line-height: 1.2;
-    color: var(--color-black);
-}
-
-.welcome-description a {
-    font-style: oblique 10deg;
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-.welcome-description a:hover {
-    text-decoration: underline;
 }
 
 .display-1 {
@@ -158,6 +134,8 @@ body {
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: 0.01em;
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-02);
     color: var(--color-black);
 }
 
@@ -174,6 +152,8 @@ body {
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.01em;
+    margin-top: var(--spacing-02);
+    margin-bottom: var(--spacing-02);
     color: var(--color-black);
 }
 
@@ -204,4 +184,45 @@ body {
 .link:focus {
     color: var(--color-primary);
     text-decoration: underline;
+}
+
+/*Article elements*/
+
+ol, ul {
+    padding-left: var(--spacing-04);
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-04);
+}
+
+::marker {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+li {
+    margin-top: var(--spacing-02);
+    padding-left: var(--spacing-02);
+    margin-bottom: var(--spacing-02);
+}
+
+.headline-divider {
+    margin-top: var(--spacing-06);
+    margin-bottom: var(--spacing-04);
+}
+
+.headline-divider::after {
+    content: "";
+    display: block;
+    width: calc(100% + var(--margin-main-horizontal));
+    padding-top: var(--spacing-03);
+    border-bottom: 1px solid var(--color-black);
+}
+
+/* Desktop headline divider */
+@media screen and (min-width: 1024px) {
+
+    .headline-divider::after {
+        width: 100%;
+    }
 }

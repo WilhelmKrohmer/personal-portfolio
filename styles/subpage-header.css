@@ -1,3 +1,8 @@
+/*
+ * The subpage header is a component used 
+ * on all subpages containing back-navigation.
+ **/
+
 .subpage-header {
     background-color: var(--color-secondary);
     height: 52px;
@@ -5,5 +10,32 @@
 }
 
 .subpage-header .button {
-    margin-top: 30px;
+    margin-top: var(--spacing-06);
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 600px) {
+
+    .subpage-header {
+        padding: 0 var(--spacing-10);
+    }
+
+}
+
+/* Desktop layout */
+@media screen and (min-width: 1024px) {
+
+    .subpage-header {
+        position: fixed;
+        width: 30%;
+        max-width: 432px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .subpage-header .button {
+        margin-top: var(--spacing-08);
+    }
+    
 }

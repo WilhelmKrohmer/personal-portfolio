@@ -15,23 +15,24 @@
 }
 
 /* Last element in story tile */
-.story-tile :last-child {
+.story-tile-texts, .story-tile-texts .button {
     margin-bottom: 0;
 }
 
 .story-tile picture {
-    display: flex;
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-    background-color: var(--color-secondary);
+    position: relative;
 }
 
 .story-tile img {
+    display: block;
     object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 200px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
     margin: 0;
+    background-color: var(--color-secondary);
+    margin-bottom: var(--spacing-03);
 }
 
 /* Tablet layout */
@@ -70,9 +71,8 @@
         margin-top: var(--spacing-04);
     }
 
-    .story-tile picture {
+    .story-tile img, .story-tile picture {
         min-width: 250px;
-        padding-top: 250px;
         margin-bottom: 0;
     }
 
