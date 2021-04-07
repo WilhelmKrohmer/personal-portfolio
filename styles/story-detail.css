@@ -2,6 +2,18 @@ article {
     max-width: 60ch;
 }
 
+picture {
+    display: block;
+}
+
+img, video {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin: var(--spacing-04) 0;
+}
+
 /* Tablet Layout */
 @media screen and (min-width: 700px) {
 
