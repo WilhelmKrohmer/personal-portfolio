@@ -10,32 +10,144 @@
     <meta name="theme-color" content="#fff969" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="referrer" content="no-referrer">
-    <link rel="stylesheet" href="css/fontstyles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/startpage.css" rel="stylesheet">
+    
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/welcome-header.css" rel="stylesheet">
+    <link href="styles/story-tile.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+    
     <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" sizes="192x192" href="apple-touch-icon.png">
 </head>
 
 <body>
-    <div class="greetings-container">
-        <div class="greetings">
-            <h1 class="greetings__text display font-base">Buenos días!</h1>
-        </div>
-    </div>
-    <div class="description">
-        <p class="description__text display font-base">
-            My name is
-            <a class="link" href="https://www.xing.com/profile/Wilhelm_Krohmer" target="new">Wilhelm Krohmer</a>.
-            I <a class="link" href="https://www.behance.net/wilkro" target="new">design</a>,
+    <header class="welcome-header">
+        <h1 class="welcome-text">Buenos días!</h1>
+        <p class="welcome-description">My name is Wilhelm Krohmer.
+            I <a class="link" href="#stories">design</a>,
             <a class="link" href="https://vimeo.com/334477258" target="new">dance</a>,
             <a class="link" href="https://github.com/WilhelmKrohmer" target="new">code</a> &#38;
             <a class="link" href="https://wilhelmkrohmer.tumblr.com/" target="new">observe</a>.
         </p>
-    </div>
-    <a class="impressum__text link font-base" href="impressum.html">Imprint & Privacy</a>
-    <script src="js/greetings.js"></script>
+    </header>
+    <main>
+        <section id="stories">
+            <h2 class="display-3">Stories</h2>
+            <div class="stories-list">
+                <article class="story-tile">
+                    <picture>
+                        <img src="images/nailing-the-basics/otelo-cover-nailing-the-basics.png" 
+                            alt="mobile phone with menu at the bottom of the screen">
+                    </picture>
+                    <div class="story-tile-texts">
+                        <h3 class="display-3">Nailing the basics: mobile navigation</h3>
+                        <p class="body-1-short">
+                            With increasing complexity of mobile apps, 
+                            having a simple navigation has never been more important. 
+                            Joining the otelo app team I redesigned their navigation, 
+                            improving the overall app architecture in the&nbspprocess.
+                        </p>
+                        <a class="body-2-black button" 
+                            href="stories/nailing-the-basics.html">
+                            <span class="button-background trailing-icon">
+                                Read this story
+                            </span>
+                        </a>
+                    </div>
+                </article>
+                <article class="story-tile">
+                    <picture>
+                        <img src="images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.png" 
+                            alt="mobile phone displaying e-commerce product categories and search">
+                    </picture>
+                    <div class="story-tile-texts">
+                        <h3 class="display-3">Finding the right product (fast) — part&nbsp1</h3>
+                        <p class="body-1-short">
+                            In e-commerce there are many kinds of shoppers, each with their 
+                            unique traits and needs. To help product-focused customers find 
+                            their desired product faster, I redesigned s.Oliver's 
+                            search and&nbspcategories.
+                        </p>
+                        <a class="body-2-black button" 
+                            href="stories/finding-the-right-product-fast-1.html">
+                            <span class="button-background trailing-icon">
+                                Read this story
+                            </span>
+                        </a>
+                    </div>
+                </article>
+                <article class="story-tile">
+                    <picture>
+                        <img src="images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.png" 
+                            alt="mobile phone displaying a list with various fashion products">
+                    </picture>
+                    <div class="story-tile-texts">
+                        <h3 class="display-3">Finding the right product (fast) — part&nbsp2</h3>
+                        <p class="body-1-short">
+                            Finding the right product online can feel like detective work. 
+                            I redesigned s.Oliver's product list helping customers decide which 
+                            product really deserves their attention.
+                        </p>
+                        <a class="body-2-black button" 
+                            href="stories/finding-the-right-product-fast-2.html">
+                            <span class="button-background trailing-icon">
+                                Read this story
+                            </span>
+                        </a>
+                    </div>
+                </article>
+                <article class="story-tile">
+                    <picture>
+                        <img src="images/klangfang-cover.png" 
+                            alt="mobile phone displaying a list of sound compositions">
+                    </picture>
+                    <div class="story-tile-texts">
+                        <h3 class="display-3">Klangfang: the social sound-editor</h3>
+                        <p class="body-1-short">
+                            Listen, collect sounds, compose together. 
+                            Klangfang is a social sound editor that connects you 
+                            to other people in a special&nbspway.
+                        </p>
+                        <a class="body-2-black button" 
+                            href="https://klangfangapp.de/"
+                            target="blank">
+                            <span class="button-background trailing-icon">
+                                Check out project
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="about">
+            <h2 class="display-3">About me</h2>
+            <p class="body-1-long">
+                My name is Wilhelm Krohmer (he/him). 
+                I am a digital product designer and dancer. 
+                As a designer I want to create web and mobile apps 
+                that care about the <del>users</del> people using them. 
+                Products should be fun, enable people to solve their problems 
+                and make them feel comfortable. As such I strive for ethical, 
+                inclusive and privacy-focused products with a clear&nbspvision.
+            </p>
+            <p class="body-1-long">
+                In my free time I practice dancing, photography, 
+                coding and speaking various&nbsplanguages.</p>
+            <a class="body-2-black button" 
+                href="about.html">
+                <span class="button-background trailing-icon">
+                    Learn more
+                </span>
+            </a>
+        </section>
+    </main>    
+    <footer>
+            <p class="body-2-short">No tracking — <a class="impressum__text link" href="impressum.html">Imprint & Privacy</a></p>
+    </footer>
+    
+    <script src="scripts/greetings.js"></script>
 </body>
 
 </html>

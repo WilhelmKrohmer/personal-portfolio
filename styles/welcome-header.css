@@ -1,0 +1,109 @@
+/*Mobile Layout*/
+
+/*Defines the greeting with dynamic font scaling*/
+.welcome-text {
+    font-family: 'Mikro';
+    font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
+    
+    /*Properties for type scaling*/
+    --font-size-min: 4.375rem; /*70px*/
+    --font-size-max: 7.5rem; /*120px*/
+    --font-size-scaling: 15vw; 
+    
+    /*Fallback font-size*/
+    font-size: var(--font-size-min);
+    /*Scales the font between a minimum and maximum*/
+    font-size: clamp(
+        var(--font-size-min),
+        calc(1rem + var(--font-size-scaling)), 
+        var(--font-size-max)
+        );
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.welcome-description {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.563rem; /*25px*/
+    line-height: 1.2;
+    color: var(--color-black);
+}
+
+.welcome-description a {
+    font-style: oblique 10deg;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.welcome-description a:hover {
+    text-decoration: underline;
+}
+
+.welcome-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 66vh;
+    padding-top: var(--spacing-04);
+    padding-bottom: var(--spacing-06);
+    padding-left: var(--spacing-04);
+    padding-right: var(--spacing-04);
+    background-color: #fff969;
+}
+
+.welcome-header h1 {
+    max-width: 20ch;
+    margin: 0;
+}
+
+.welcome-header p {
+    max-width: 20ch;
+    margin: 0;
+}
+
+/* Tablet layout */
+@media screen and (min-width: 600px) {
+
+    .welcome-header {
+        padding-top: var(--spacing-06);
+        padding-bottom: var(--spacing-10);
+        padding-left: var(--spacing-10);
+        padding-right: var(--spacing-10);
+    }
+
+}
+
+/* Desktop layout */
+@media screen and (min-width: 1024px) {
+
+    /*Scales font differently on desktop */
+    .welcome-text {
+        /*Properties for type scaling*/
+        --font-size-min: 3.438rem; /*55px*/
+        --font-size-max: 5rem; /*80px*/
+        --font-size-scaling: 4.5vw; 
+        
+        /*Fallback font-size*/
+        font-size: var(--font-size-min);
+        /*Scales the font between a minimum and maximum*/
+        font-size: clamp(
+            var(--font-size-min),
+            calc(1rem + var(--font-size-scaling)), 
+            var(--font-size-max)
+            );
+    }
+
+    .welcome-header {
+        position: fixed;
+        width: 30%;
+        max-width: 432px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+}

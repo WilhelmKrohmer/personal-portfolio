@@ -1,0 +1,81 @@
+.favorite-tool-list {
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-04);
+    margin-left: var(--spacing-04);
+}
+
+.favorite-tool-list dt {
+    display: list-item;
+    list-style-type: disc;
+    padding-left: var(--spacing-02);
+}
+
+.favorite-tool-list dd {
+    margin-left: var(--spacing-02);
+    margin-bottom: var(--spacing-02);
+}
+
+.favorite-tool-definiton {
+    font-style: oblique 10deg;
+    color: var(--color-dark-grey);
+}
+
+.contact-info {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    padding-left: 0;
+}
+
+article {
+    max-width: 60ch;
+}
+
+section ul {
+    margin-top: var(--spacing-02);
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 700px) {
+
+    main {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+/* Desktop layout */
+@media screen and (min-width: 1024px) {
+
+    article {
+        max-width: 708px;
+    }
+
+    main {
+        justify-content: center;
+        margin-left: calc(30% + var(--margin-main-horizontal));
+    }
+
+    #skills, #other-tools {
+        columns: 2;
+        column-gap: var(--spacing-02);
+    }
+
+    #skills h2, #other-tools h2 {
+        column-span: all;
+    }
+
+    .section-columns {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .section-columns :first-child, #other-tools :first-child {
+        margin-top: 0;
+    }
+
+}

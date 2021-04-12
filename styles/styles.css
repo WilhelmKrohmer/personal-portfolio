@@ -1,0 +1,238 @@
+/* CONTENT
+    * Color styles
+    * Box shadows
+    * Spacing units
+    * Typography
+    * Article elements
+*/
+
+:root {
+    /*Color styles*/
+    --color-primary: #0E60FF;
+    --color-primary-dark: #004BDB;
+    --color-secondary: #FFF969;
+    --color-black: #000000;
+    --color-dark-grey: #666666;
+    --color-light-grey: #CCCCCC;
+    --color-white: #FFFFFF;
+
+    /*Box shadows*/
+    --box-shadow-01: 4px 4px 0px var(--color-black);
+    --box-shadow-02: 8px 8px 0px var(--color-black);
+
+    /*Spacing units*/
+    --spacing-01: 5px;
+    --spacing-02: calc(var(--spacing-01)*2);
+    --spacing-03: calc(var(--spacing-01)*3);
+    --spacing-04: calc(var(--spacing-01)*4);
+    --spacing-05: calc(var(--spacing-01)*5);
+    --spacing-06: calc(var(--spacing-01)*6);
+    --spacing-07: calc(var(--spacing-01)*7);
+    --spacing-08: calc(var(--spacing-01)*8);
+    --spacing-09: calc(var(--spacing-01)*9);
+    --spacing-10: calc(var(--spacing-01)*10);
+}
+
+/*Horizontal margin used in main tag on all pages*/
+main {
+    --margin-main-horizontal: var(--spacing-04);
+    --margin-main-vertical: var(--spacing-08);
+}
+
+/* TYPOGRAPHY */
+
+/* Webfonts: Copyright © Letters From Sweden. All rights reserved. 
+To obtain a license, please see: https://lettersfromsweden.se */
+@font-face {
+    font-family: 'Mikro';
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/Mikro-Black.otf') format('opentype');
+    font-display: swap;
+}
+
+/*
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+See license at: http://scripts.sil.org/OFL
+See font at: https://github.com/rsms/inter 
+*/
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: oblique 0deg 10deg;
+    src: url("../fonts/Inter.var.woff2?v=3.15") format("woff2-variations");
+  }
+
+/*Basic typographic settings*/
+body {
+    font-family: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-synthesis: none;
+    --font-feature-settings-value:
+        'liga' on,
+        'kern' on,
+        'calt' on,
+        'zero' on, 
+        'ordn' on, 
+        'ss01' on, 
+        'ss02' on, 
+        'ss03' on, 
+        'cv01' on, 
+        'cv10' on;
+    -webkit-font-feature-settings: var(--font-feature-settings-value);
+    -moz-font-feature-settings: var(--font-feature-settings-value);
+    -ms-font-feature-settings: var(--font-feature-settings-value);
+    font-feature-settings: var(--font-feature-settings-value);
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Text styles*/
+
+/*Defines all styles that use Mikro font*/
+.display-1, .display-2, .display-3 {
+    font-family: 'Mikro';
+    --font-feature-settings-value:
+        'liga' on,
+        'kern' on,
+        'tnum' on, 
+        'lnum' on, 
+        'zero' on, 
+        'ordn' on, 
+        'ss02' on, 
+        'ss03' on;
+    -webkit-font-feature-settings: var(--font-feature-settings-value);
+    -moz-font-feature-settings: var(--font-feature-settings-value);
+    -ms-font-feature-settings: var(--font-feature-settings-value);
+    font-feature-settings: var(--font-feature-settings-value);
+    margin-top: var(--spacing-08);
+    margin-bottom: var(--spacing-04);
+    color: var(--color-black);
+}
+
+.display-1 {
+    font-size: 3.438rem; /*55px*/
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.display-2 {
+    font-size: 2.188rem; /*35px*/
+    line-height: 1.25;
+}
+
+.display-3 {
+    font-size: 1.563rem; /*25px*/
+    line-height: 1.25;
+}
+
+.display-4 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-02);
+    color: var(--color-black);
+}
+
+/*Only used for short paragraphs, up to 3 lines*/
+.body-1-short {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+/*Only used for long paragraphs, with optimized readability*/
+.body-1-long {
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    margin-top: var(--spacing-02);
+    margin-bottom: var(--spacing-02);
+    color: var(--color-black);
+}
+
+.body-2-short {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--color-black);
+}
+
+.body-2-black {
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+}
+
+.link {
+    text-decoration: underline;
+    font-style: oblique 10deg;
+    color: var(--color-black);
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+.link:focus {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/*Article elements*/
+
+ol, ul {
+    padding-left: var(--spacing-04);
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-04);
+}
+
+::marker {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+li {
+    margin-top: var(--spacing-02);
+    padding-left: var(--spacing-02);
+    margin-bottom: var(--spacing-02);
+}
+
+figcaption {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin-top: calc(var(--spacing-02) * -1);
+    font-style: oblique 10deg;
+    color: var(--color-dark-grey);
+}
+
+.headline-divider {
+    margin-top: var(--spacing-06);
+    margin-bottom: var(--spacing-04);
+}
+
+.headline-divider::after {
+    content: "";
+    display: block;
+    width: calc(100% + var(--margin-main-horizontal));
+    padding-top: var(--spacing-03);
+    border-bottom: 1px solid var(--color-black);
+}
+
+/* Desktop headline divider */
+@media screen and (min-width: 1024px) {
+
+    .headline-divider::after {
+        width: 100%;
+    }
+}
