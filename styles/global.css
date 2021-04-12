@@ -40,31 +40,48 @@ main {
 
 /*Button*/
 .button {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
     display: inline-block;
-    padding: var(--spacing-02) var(--spacing-03);
     text-decoration: none;
+}
+
+.button-background {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-02) var(--spacing-03);
     background-color: var(--color-primary);
     color: var(--color-white);
-    box-shadow: var(--box-shadow-01);
-    transition: all .5s ease-in-out;
+    will-change: transform;
+    transition: transform .5s ease;
 }
 
-.button:hover {
-    transition: all .125s ease;
+/*Button Shadow*/
+.button::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-black);
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(4px, 4px);
+  }
+
+.button:hover .button-background {
+    transition: transform .125s ease;
     transform: translate(-4px, -4px);
-    box-shadow: var(--box-shadow-02);
 }
 
-.button:active {
+.button:active .button-background {
     background-color: var(--color-primary-dark);
 }
 
-.button:focus {
+.button:focus .button-background {
+    transition: transform .125s ease;
     background-color: var(--color-primary-dark);
     transform: translate(-4px, -4px);
-    box-shadow: var(--box-shadow-02);
 }
 
 .trailing-icon::after {

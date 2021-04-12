@@ -15,7 +15,9 @@
 }
 
 /* Last element in story tile */
-.story-tile-texts, .story-tile-texts .button {
+.story-tile-texts, 
+.story-tile-texts .button, 
+.story-tile-texts .button-background {
     margin-bottom: 0;
 }
 

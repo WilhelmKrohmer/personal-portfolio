@@ -173,6 +173,7 @@ body {
 }
 
 .link {
+    text-decoration: underline;
     font-style: oblique 10deg;
     color: var(--color-black);
 }
@@ -204,6 +205,15 @@ li {
     margin-top: var(--spacing-02);
     padding-left: var(--spacing-02);
     margin-bottom: var(--spacing-02);
+}
+
+figcaption {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin-top: calc(var(--spacing-02) * -1);
+    font-style: oblique 10deg;
+    color: var(--color-dark-grey);
 }
 
 .headline-divider {
