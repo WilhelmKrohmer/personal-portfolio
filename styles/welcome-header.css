@@ -104,6 +104,13 @@
             );
     }
 
+    /* Fallback for old browsers, especially safari*/
+    @supports not (clamp()) {
+        .welcome-text {
+            font-size: var(--font-size-min);
+        }
+    }
+
     .welcome-header {
         position: fixed;
         width: 30%;
