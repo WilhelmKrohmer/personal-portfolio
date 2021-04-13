@@ -8,16 +8,10 @@
     /*Properties for type scaling*/
     --font-size-min: 4.375rem; /*70px*/
     --font-size-max: 7.5rem; /*120px*/
-    --font-size-scaling: 15vw; 
+    --font-size-scaling: 15vw;
     
     /*Fallback font-size*/
     font-size: var(--font-size-min);
-    /*Scales the font between a minimum and maximum*/
-    font-size: clamp(
-        var(--font-size-min),
-        calc(1rem + var(--font-size-scaling)), 
-        var(--font-size-max)
-        );
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -25,10 +19,23 @@
 }
 
 /* Fallback for old browsers, especially safari*/
-@supports not (clamp()) {
+@supports (font-size: clamp(var(--font-size-min),
+            calc(1rem + var(--font-size-scaling)), 
+            var(--font-size-max))) {
+
     .welcome-text {
-        font-size: var(--font-size-min);
+        /*Properties for type scaling*/
+        --font-size-min: 4.375rem; /*70px*/
+        --font-size-max: 7.5rem; /*120px*/
+        --font-size-scaling: 15vw;
+        /*Scales the font between a minimum and maximum*/
+        font-size: clamp(
+            var(--font-size-min),
+            calc(1rem + var(--font-size-scaling)), 
+            var(--font-size-max)
+            );
     }
+
 }
 
 .welcome-description {
@@ -87,28 +94,29 @@
 /* Desktop layout */
 @media screen and (min-width: 1024px) {
 
-    /*Scales font differently on desktop */
     .welcome-text {
-        /*Properties for type scaling*/
         --font-size-min: 3.438rem; /*55px*/
-        --font-size-max: 5rem; /*80px*/
-        --font-size-scaling: 4.5vw; 
-        
-        /*Fallback font-size*/
         font-size: var(--font-size-min);
-        /*Scales the font between a minimum and maximum*/
-        font-size: clamp(
-            var(--font-size-min),
-            calc(1rem + var(--font-size-scaling)), 
-            var(--font-size-max)
-            );
     }
 
-    /* Fallback for old browsers, especially safari*/
-    @supports not (clamp()) {
+    /*Scales font if clamp is supported on desktop */
+    @supports (font-size: clamp(var(--font-size-min),
+                calc(1rem + var(--font-size-scaling)), 
+                var(--font-size-max))) {
+
         .welcome-text {
-            font-size: var(--font-size-min);
+            /*Properties for type scaling*/
+            --font-size-min: 3.438rem; /*55px*/
+            --font-size-max: 5rem; /*80px*/
+            --font-size-scaling: 4.5vw; 
+            /*Scales the font between a minimum and maximum*/
+            font-size: clamp(
+                var(--font-size-min),
+                calc(1rem + var(--font-size-scaling)), 
+                var(--font-size-max)
+                );
         }
+        
     }
 
     .welcome-header {
