@@ -93,7 +93,7 @@ body {
 
 /*Defines all styles that use Mikro font*/
 .display-1, .display-2, .display-3 {
-    font-family: 'Mikro';
+    font-family: 'Mikro', 'Inter var', sans-serif;
     --font-feature-settings-value:
         'liga' on,
         'kern' on,

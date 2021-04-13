@@ -1,8 +1,8 @@
 /*Mobile Layout*/
 
-/*Defines the greeting with dynamic font scaling*/
+/*Greeting on homepage*/
 .welcome-text {
-    font-family: 'Mikro';
+    font-family: 'Mikro', 'Inter var', sans-serif;
     font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
     
     /*Properties for type scaling*/
@@ -18,16 +18,10 @@
     color: var(--color-primary);
 }
 
-/* Fallback for old browsers, especially safari*/
-@supports (font-size: clamp(var(--font-size-min),
-            calc(1rem + var(--font-size-scaling)), 
-            var(--font-size-max))) {
+/*Scales greeting if clamp is supported on desktop */
+@supports (font-size: clamp(1rem, 3vw, 3rem)) {
 
     .welcome-text {
-        /*Properties for type scaling*/
-        --font-size-min: 4.375rem; /*70px*/
-        --font-size-max: 7.5rem; /*120px*/
-        --font-size-scaling: 15vw;
         /*Scales the font between a minimum and maximum*/
         font-size: clamp(
             var(--font-size-min),
@@ -95,20 +89,17 @@
 @media screen and (min-width: 1024px) {
 
     .welcome-text {
+        /*Properties for type scaling*/
         --font-size-min: 3.438rem; /*55px*/
+        --font-size-max: 5rem; /*80px*/
+        --font-size-scaling: 4.5vw;
         font-size: var(--font-size-min);
     }
 
     /*Scales font if clamp is supported on desktop */
-    @supports (font-size: clamp(var(--font-size-min),
-                calc(1rem + var(--font-size-scaling)), 
-                var(--font-size-max))) {
+    @supports (font-size: clamp(1rem, 3vw, 3rem)) {
 
-        .welcome-text {
-            /*Properties for type scaling*/
-            --font-size-min: 3.438rem; /*55px*/
-            --font-size-max: 5rem; /*80px*/
-            --font-size-scaling: 4.5vw; 
+        .welcome-text { 
             /*Scales the font between a minimum and maximum*/
             font-size: clamp(
                 var(--font-size-min),
