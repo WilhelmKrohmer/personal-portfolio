@@ -113,7 +113,6 @@
     .welcome-header {
         position: fixed;
         width: 30%;
-        max-width: 432px;
         height: 100%;
         top: 0;
         left: 0;
