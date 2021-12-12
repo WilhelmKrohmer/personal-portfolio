@@ -51,3 +51,12 @@ video {
         margin-bottom: 0;
     }
 }
+
+/* Wide layout */
+@media screen and (min-width: 1200px) {
+
+    main {
+        margin-left: calc(432px + var(--margin-main-horizontal));
+    }
+
+}
