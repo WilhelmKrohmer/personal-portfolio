@@ -18,6 +18,7 @@ html, body {
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
+    background-color: var(--semantic-color-backdrop);
 }
 
 main {
@@ -97,7 +98,6 @@ main {
 /*Footer*/
 footer {
     width: 100%;
-    background-color: var(--color-secondary);
     padding: var(--spacing-03) var(--spacing-04);
 }
 
@@ -123,7 +123,6 @@ footer p {
         padding-left: var(--spacing-05);
         padding-right: var(--spacing-05);
         margin-left: 30%;
-        background-color: var(--color-white);
     }
 
     footer p {
