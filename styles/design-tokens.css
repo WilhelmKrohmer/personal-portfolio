@@ -1,0 +1,64 @@
+/* CONTENT
+    * Color
+    * Grid
+*/
+
+:root {
+    /*COLOR TOKENS*/
+
+    /*Transparency*/
+    --core-color-translucence-0: #FFFFFF00;
+    /*Green*/
+    --core-color-green-80: #5BFEB0;
+    /*Purple*/
+    --core-color-purple-0: #000000;
+    --core-color-purple-5: #0A0914;
+    --core-color-purple-10: #0A061F;
+    --core-color-purple-15: #1C0F4D;
+    --core-color-purple-20: #3000A1;
+    --core-color-purple-25: #1D00BF;
+    --core-color-purple-30: #3A00DF;
+    --core-color-purple-35: #3A29CF;
+    --core-color-purple-40: #4332FD;
+    --core-color-purple-50: #5D5DFF;
+    --core-color-purple-60: #8080FF;
+    --core-color-purple-70: #B3B3FF;
+    --core-color-purple-80: #C9C9FF;
+    --core-color-purple-90: #DEDEFF;
+    --core-color-purple-95: #EFEFFF;
+    --core-color-purple-98: #F5F5FF;
+    --core-color-purple-99: #F9F9FF;
+    --core-color-purple-100: #ffffff;
+    /*Neutral*/
+    --core-color-neutral-0: #000000;
+    --core-color-neutral-5: #111014;
+    --core-color-neutral-10: #1C1B1F;
+    --core-color-neutral-15: #262529;
+    --core-color-neutral-20: #313034;
+    --core-color-neutral-25: #3C3B3F;
+    --core-color-neutral-30: #48464A;
+    --core-color-neutral-35: #535256;
+    --core-color-neutral-40: #5F5E62;
+    --core-color-neutral-50: #78767A;
+    --core-color-neutral-60: #929094;
+    --core-color-neutral-70: #ADAAAF;
+    --core-color-neutral-80: #C9C5CA;
+    --core-color-neutral-90: #E5E1E6;
+    --core-color-neutral-95: #EFEFF4;
+    --core-color-neutral-98: #F8F8FD;
+    --core-color-neutral-99: #FBFBFF;
+    --core-color-neutral-100: #ffffff;
+
+
+    /*GRID TOKENS*/
+    --spacing-01: 5px;
+    --spacing-02: calc(var(--spacing-01)*2);
+    --spacing-03: calc(var(--spacing-01)*3);
+    --spacing-04: calc(var(--spacing-01)*4);
+    --spacing-05: calc(var(--spacing-01)*5);
+    --spacing-06: calc(var(--spacing-01)*6);
+    --spacing-07: calc(var(--spacing-01)*7);
+    --spacing-08: calc(var(--spacing-01)*8);
+    --spacing-09: calc(var(--spacing-01)*9);
+    --spacing-10: calc(var(--spacing-01)*10);
+}
