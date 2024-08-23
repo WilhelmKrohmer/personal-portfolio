@@ -15,7 +15,7 @@
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: var(--color-primary);
+    color: var(--semantic-color-content-accent);
 }
 
 /*Scales greeting if clamp is supported on desktop */

@@ -1,16 +1,22 @@
 /* CONTENT
-    * Color
-    * Grid
+   * Core tokens
+     * Color
+     * Grid
+   * Semantic tokens
+     * Color
+     * Shape
+     * Padding
+     * Gap
 */
 
 :root {
-    /*COLOR TOKENS*/
 
-    /*Transparency*/
-    --core-color-translucence-0: #FFFFFF00;
-    /*Green*/
+    /*CORE TOKENS*/
+
+    /* Core color tokens */
+    --core-color-translucence-0: #FFFFFF00; 
     --core-color-green-80: #5BFEB0;
-    /*Purple*/
+
     --core-color-purple-0: #000000;
     --core-color-purple-5: #0A0914;
     --core-color-purple-10: #0A061F;
@@ -29,7 +35,7 @@
     --core-color-purple-98: #F5F5FF;
     --core-color-purple-99: #F9F9FF;
     --core-color-purple-100: #ffffff;
-    /*Neutral*/
+
     --core-color-neutral-0: #000000;
     --core-color-neutral-5: #111014;
     --core-color-neutral-10: #1C1B1F;
@@ -48,17 +54,80 @@
     --core-color-neutral-98: #F8F8FD;
     --core-color-neutral-99: #FBFBFF;
     --core-color-neutral-100: #ffffff;
+    
+
+    /* Grid tokens */
+    --core-grid-00: 0px;
+    --core-grid-01: calc(var(--core-grid-02)/2.5);
+    --core-grid-02: 5px;
+    --core-grid-03: calc(var(--core-grid-02)*2);
+    --core-grid-04: calc(var(--core-grid-02)*3);
+    --core-grid-05: calc(var(--core-grid-02)*4);
+    --core-grid-06: calc(var(--core-grid-02)*5);
+    --core-grid-07: calc(var(--core-grid-02)*6);
+    --core-grid-08: calc(var(--core-grid-02)*8);
+    --core-grid-09: calc(var(--core-grid-02)*10);
+    --core-grid-10: calc(var(--core-grid-02)*13);
+    --core-grid-11: calc(var(--core-grid-02)*16);
+    --core-grid-12: calc(var(--core-grid-02)*20);
+    --core-grid-13: calc(var(--core-grid-02)*30);
 
 
-    /*GRID TOKENS*/
-    --spacing-01: 5px;
-    --spacing-02: calc(var(--spacing-01)*2);
-    --spacing-03: calc(var(--spacing-01)*3);
-    --spacing-04: calc(var(--spacing-01)*4);
-    --spacing-05: calc(var(--spacing-01)*5);
-    --spacing-06: calc(var(--spacing-01)*6);
-    --spacing-07: calc(var(--spacing-01)*7);
-    --spacing-08: calc(var(--spacing-01)*8);
-    --spacing-09: calc(var(--spacing-01)*9);
-    --spacing-10: calc(var(--spacing-01)*10);
+    /* SEMANTIC TOKENS */
+
+    /* Semantic color tokens */
+    --semantic-color-backdrop: var(--core-color-purple-95);
+    --semantic-color-border-standard: var(--core-color-purple-10);
+    --semantic-color-border-inverse: var(--core-color-purple-99);
+
+    --semantic-color-surface-none: var(--core-color-translucence-0);
+    --semantic-color-surface-standard: var(--core-color-purple-99);
+    --semantic-color-surface-onStandard: var(--core-color-purple-95);
+    --semantic-color-surface-accent: var(--core-color-green-80);
+    --semantic-color-surface-contrast: var(--core-color-purple-40);
+    --semantic-color-surface-hovered: var(--core-color-purple-90);
+    --semantic-color-surface-pressed: var(--core-color-purple-80);
+    --semantic-color-surface-focussed: var(--core-color-purple-90);
+
+    --semantic-color-surface-highlight-static: var(--core-color-purple-40);
+    --semantic-color-surface-highlight-enabled: var(--core-color-purple-40);
+    --semantic-color-surface-highlight-hovered: var(--core-color-purple-50);
+    --semantic-color-surface-highlight-pressed: var(--core-color-purple-35);
+    --semantic-color-surface-highlight-focussed: var(--core-color-purple-50);
+    --semantic-color-surface-onContrast-enabled: var(--core-color-translucence-0);
+    --semantic-color-surface-onContrast-hovered: var(--core-color-purple-60);
+    --semantic-color-surface-onContrast-selected: var(--core-color-purple-50);
+    --semantic-color-surface-onContrast-pressed: var(--core-color-purple-50);
+    --semantic-color-surface-onContrast-focussed: var(--core-color-purple-50);
+
+    --semantic-color-content-standard: var(--core-color-purple-10);
+    --semantic-color-content-muted: var(--core-color-neutral-30);
+    --semantic-color-content-subtle: var(--core-color-neutral-40);
+    --semantic-color-content-inverse: var(--core-color-purple-99);
+    --semantic-color-content-accent: var(--core-color-green-80);
+
+    --semantic-color-content-highlight-static: var(--core-color-purple-40);
+    --semantic-color-content-highlight-enabled: var(--core-color-purple-40);
+    --semantic-color-content-highlight-hovered: var(--core-color-purple-50);
+    --semantic-color-content-highlight-pressed: var(--core-color-purple-35);
+    --semantic-color-content-highlight-focussed: var(--core-color-purple-50);
+
+    /* Border */
+    --semantic-border-radius-none: var(--core-grid-00);
+    --semantic-border-radius-subtle: var(--core-grid-02);
+    --semantic-border-radius-medium: var(--core-grid-03);
+    --semantic-border-radius-strong: var(--core-grid-04);
+    --semantic-border-radius-extreme: var(--core-grid-05);
+    --semantic-border-radius-round: 99px;
+    
+    --semantic-border-strength-none: 0;
+    --semantic-border-strength-subtle: .5;
+    --semantic-border-strength-medium: 1;
+    --semantic-border-strength-strong: 1.5;
+    --semantic-border-strength-extreme: 2;
+    --semantic-border-strength-max: 3;
+
+    /* Padding */
+
+    /* Gap */
 }
