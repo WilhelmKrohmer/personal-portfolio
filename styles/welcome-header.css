@@ -37,17 +37,19 @@
     font-weight: 600;
     font-size: 1.563rem; /*25px*/
     line-height: 1.2;
-    color: var(--color-black);
+    color: var(--semantic-color-content-inverse);
+    
 }
 
 .welcome-description a {
     font-style: oblique 10deg;
-    color: var(--color-primary);
+    color: var(--semantic-color-content-inverse);
     text-decoration: none;
 }
 
 .welcome-description a:hover {
     text-decoration: underline;
+    color: var(--semantic-color-surface-onContrast-hovered);
 }
 
 .welcome-header {
@@ -60,7 +62,7 @@
     padding-bottom: var(--spacing-06);
     padding-left: var(--spacing-04);
     padding-right: var(--spacing-04);
-    background-color: var(--color-secondary);
+    background-color: var(--semantic-color-surface-contrast);
 }
 
 .welcome-header h1 {
