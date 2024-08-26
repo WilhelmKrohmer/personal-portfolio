@@ -7,19 +7,6 @@
 */
 
 :root {
-    /*Color styles*/
-    --color-primary: #0E60FF;
-    --color-primary-dark: #004BDB;
-    --color-secondary: #FFF67A;
-    --color-black: #000000;
-    --color-dark-grey: #666666;
-    --color-light-grey: #CCCCCC;
-    --color-white: #FFFFFF;
-
-    /*Box shadows*/
-    --box-shadow-01: 4px 4px 0px var(--color-black);
-    --box-shadow-02: 8px 8px 0px var(--color-black);
-
     /*Spacing units*/
     --spacing-01: 5px;
     --spacing-02: calc(var(--spacing-01)*2);
@@ -109,14 +96,13 @@ body {
     font-feature-settings: var(--font-feature-settings-value);
     margin-top: var(--spacing-08);
     margin-bottom: var(--spacing-04);
-    color: var(--color-black);
 }
 
 .display-1 {
     font-size: 3.438rem; /*55px*/
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: var(--color-primary);
+    color: var(--semantic-color-content-highlight-static);
 }
 
 .display-2 {
@@ -136,7 +122,6 @@ body {
     letter-spacing: 0.01em;
     margin-top: var(--spacing-04);
     margin-bottom: var(--spacing-02);
-    color: var(--color-black);
 }
 
 /*Only used for short paragraphs, up to 3 lines*/
@@ -144,7 +129,6 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.01em;
-    color: var(--color-black);
 }
 
 /*Only used for long paragraphs, with optimized readability*/
@@ -154,14 +138,12 @@ body {
     letter-spacing: 0.01em;
     margin-top: var(--spacing-02);
     margin-bottom: var(--spacing-02);
-    color: var(--color-black);
 }
 
 .body-2-short {
     font-size: 0.875rem;
     line-height: 1.5;
     letter-spacing: 0.01em;
-    color: var(--color-black);
 }
 
 .body-2-black {
@@ -169,21 +151,19 @@ body {
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--color-black);
 }
 
 .link {
     text-decoration: underline;
-    font-style: oblique 10deg;
-    color: var(--color-black);
+    color: var(--semantic-color-content-highlight-enabled);
 }
 
 .link:hover {
-    color: var(--color-primary);
+    color: var(--semantic-color-content-highlight-hovered);
 }
 
 .link:focus {
-    color: var(--color-primary);
+    color: var(--semantic-color-content-highlight-focussed);
     text-decoration: underline;
 }
 
@@ -198,7 +178,7 @@ ol, ul {
 ::marker {
     font-size: 0.875rem;
     font-weight: 800;
-    color: var(--color-primary);
+    color: var(--semantic-color-content-highlight-static);
 }
 
 li {
@@ -213,7 +193,7 @@ figcaption {
     letter-spacing: 0.01em;
     margin-top: calc(var(--spacing-02) * -1);
     font-style: oblique 10deg;
-    color: var(--color-dark-grey);
+    color: var(--semantic-color-content-subtle);
 }
 
 .headline-divider {
@@ -226,7 +206,7 @@ figcaption {
     display: block;
     width: calc(100% + var(--margin-main-horizontal));
     padding-top: var(--spacing-03);
-    border-bottom: 1px solid var(--color-black);
+    border-bottom: var(--semantic-border-strength-subtle) solid var(--semantic-color-border-standard);
 }
 
 /* Desktop headline divider */

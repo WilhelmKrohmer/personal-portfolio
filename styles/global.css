@@ -51,38 +51,24 @@ main {
     display: flex;
     align-items: center;
     padding: var(--spacing-02) var(--spacing-03);
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--semantic-color-surface-highlight-enabled);
+    color: var(--semantic-color-content-inverse);
     will-change: transform;
     transition: transform .5s ease;
 }
 
-/*Button Shadow*/
-.button::after {
-    content: "";
-    position: absolute;
-    background-color: var(--color-black);
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translate(4px, 4px);
-  }
-
 .button:hover .button-background {
     transition: transform .125s ease;
-    transform: translate(-4px, -4px);
+    background-color: var(--semantic-color-surface-highlight-hovered);
 }
 
-.button:active .button-background {
-    background-color: var(--color-primary-dark);
+.button:active {
+    background-color: var(--semantic-color-surface-highlight-pressed);
 }
 
 .button:focus .button-background {
     transition: transform .125s ease;
-    background-color: var(--color-primary-dark);
-    transform: translate(-4px, -4px);
+    background-color: var(--semantic-color-surface-highlight-focussed);
 }
 
 .trailing-icon::after {
@@ -135,8 +121,7 @@ footer p {
 
     .button:hover {
         transform: none;
-        box-shadow: var(--box-shadow-01);
-        background-color: var(--color-primary-dark);
+        background-color: var(--semantic-color-surface-highlight-enabled);
     }
 
   }

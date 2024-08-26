@@ -10,29 +10,16 @@
 .info-box-content {
     display: block;
     text-decoration: none;
-    background-color: var(--color-white);
-    color: var(--color-black);
+    background-color: var(--semantic-color-surface-standard);
+    color: var(--semantic-color-content-standard);
+    border-radius: var(--semantic-border-radius-medium);
     padding: var(--spacing-04);
-    outline: 1px solid var(--color-black);
     transition: transform .5s ease;
 }
 
-.info-box:hover .info-box-content {
+.info-box:hover {
     transition: transform .125s ease;
-    transform: translate(-4px, -4px);
-}
 
-/* Shadow */
-.info-box::after {
-    content: "";
-    position: absolute;
-    background-color: var(--color-black);;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translate(4px, 4px);
 }
 
 /*Desktop Layout*/

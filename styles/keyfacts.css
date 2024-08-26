@@ -4,14 +4,16 @@
 */
 
 .keyfacts {
-    outline: 1px solid var(--color-light-grey);
+    background-color: var(--semantic-color-surface-standard);
+    border-radius: var(--semantic-border-radius-medium);
+    border-width: var(--semantic-border-strength-none);
     padding: 20px;
     margin-top: var(--spacing-08);
     margin-bottom: var(--spacing-08);
 }
 
 .keyfacts dt {
-    color: var(--color-primary);
+    color: var(--semantic-color-content-subtle);
 }
 
 .keyfacts dd {
