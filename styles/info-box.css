@@ -17,9 +17,19 @@
     transition: transform .5s ease;
 }
 
-.info-box:hover {
+.info-box-content:hover {
     transition: transform .125s ease;
+    background-color: var(--semantic-color-surface-hovered);
+}
 
+.info-box-content:active {
+    transition: transform .125s ease;
+    background-color: var(--semantic-color-surface-pressed);
+}
+
+.info-box-content:focus {
+    transition: transform .125s ease;
+    background-color: var(--semantic-color-surface-focussed);
 }
 
 /*Desktop Layout*/
