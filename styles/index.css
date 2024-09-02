@@ -25,7 +25,7 @@ video {
 
 #about primary-button {
     margin-top: var(--spacing-03);
-}
+}   
 
 /* Desktop layout */
 @media screen and (min-width: 1024px) {

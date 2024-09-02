@@ -39,84 +39,61 @@
         <section id="stories">
             <h2 class="display-2">Stories</h2>
             <div class="stories-list">
-                <article class="story-tile">
-                    <picture>
-                        <source type="image/webp" srcset="images/nailing-the-basics/otelo-cover-nailing-the-basics.webp">
-                        <img src="images/nailing-the-basics/otelo-cover-nailing-the-basics.png" 
-                            alt="mobile phone with menu at the bottom of the screen">
-                    </picture>
-                    <div class="story-tile-texts">
-                        <h3 class="display-3">Nailing the basics: mobile navigation</h3>
-                        <p class="body-1-short">
-                            With increasing complexity of mobile apps, 
-                            having a simple navigation has never been more important. 
-                            Joining the otelo app team I redesigned their navigation, 
-                            improving the overall app architecture in the&nbspprocess.
-                        </p>
-                        <primary-button 
-                            href="stories/nailing-the-basics.html" 
-                            label="Read this story">
-                        </primary-button>
-                    </div>
-                </article>
-                <article class="story-tile">
-                    <picture>
-                        <source type="image/webp" srcset="images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.webp">
-                        <img src="images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.png" 
-                            alt="mobile phone displaying e-commerce product categories and search">
-                    </picture>
-                    <div class="story-tile-texts">
-                        <h3 class="display-3">Finding the right product (fast) — part&nbsp1</h3>
-                        <p class="body-1-short">
-                            In e-commerce there are many kinds of shoppers, each with their 
-                            unique traits and needs. To help product-focused customers find 
-                            their desired product faster, I redesigned s.Oliver's 
-                            search and&nbspcategories.
-                        </p>
-                        <primary-button 
-                            href="stories/finding-the-right-product-fast-1.html" 
-                            label="Read this story">
-                        </primary-button>
-                    </div>
-                </article>
-                <article class="story-tile">
-                    <picture>
-                        <source type="image/webp" srcset="images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.webp">
-                        <img src="images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.png" 
-                            alt="mobile phone displaying a list with various fashion products">
-                    </picture>
-                    <div class="story-tile-texts">
-                        <h3 class="display-3">Finding the right product (fast) — part&nbsp2</h3>
-                        <p class="body-1-short">
-                            Finding the right product online can feel like detective work. 
-                            I redesigned s.Oliver's product list helping customers decide which 
-                            product really deserves their attention.
-                        </p>
-                        <primary-button 
-                            href="stories/finding-the-right-product-fast-2.html" 
-                            label="Read this story">
-                        </primary-button>
-                    </div>
-                </article>
-                <article class="story-tile">
-                    <picture>
-                        <source type="image/webp" srcset="images/klangfang-cover.webp">
-                        <img src="images/klangfang-cover.png" 
-                            alt="mobile phone displaying a list of sound compositions">
-                    </picture>
-                    <div class="story-tile-texts">
-                        <h3 class="display-3">Klangfang: the social sound-editor</h3>
-                        <p class="body-1-short">
-                            Listen, collect sounds, compose together. 
-                            Klangfang is a social sound editor that connects you 
-                            to other people in a special&nbspway.
-                        </p>
-                        <primary-button 
-                            href="https://klangfangapp.de/" 
-                            label="Check out project">
-                        </primary-button>
-                    </div>
-                </article>
+                <story-tile
+                    image="images/nailing-the-basics/otelo-cover-nailing-the-basics.webp"
+                    fallbackImage="images/nailing-the-basics/otelo-cover-nailing-the-basics.png"
+                    imageAltText="mobile phone with menu at the bottom of the screen"
+                    title="Nailing the basics: mobile navigation"
+                    description="
+                        With increasing complexity of mobile apps, 
+                        having a simple navigation has never been more important. 
+                        Joining the otelo app team I redesigned their navigation, 
+                        improving the overall app architecture in the&nbspprocess.
+                    "
+                    buttonURL="stories/nailing-the-basics.html"
+                    buttonLabel="Read this story">
+                </story-tile>
+                <story-tile
+                    image="images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.webp"
+                    fallbackImage="images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.png"
+                    imageAltText="mobile phone displaying e-commerce product categories and search"
+                    title="Finding the right product (fast) — part&nbsp1"
+                    description="
+                        In e-commerce there are many kinds of shoppers, each with their 
+                        unique traits and needs. To help product-focused customers find 
+                        their desired product faster, I redesigned s.Oliver's 
+                        search and&nbspcategories.
+                    "
+                    buttonURL="stories/finding-the-right-product-fast-1.html"
+                    buttonLabel="Read this story">
+                </story-tile>
+                <story-tile
+                    image="images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.webp"
+                    fallbackImage="images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.png"
+                    imageAltText="mobile phone displaying a list with various fashion products"
+                    title="Finding the right product (fast) — part&nbsp2"
+                    description="
+                        Finding the right product online can feel like detective work. 
+                        I redesigned s.Oliver's product list helping customers decide which 
+                        product really deserves their&nbspattention.
+                    "
+                    buttonURL="stories/finding-the-right-product-fast-2.html"
+                    buttonLabel="Read this story">
+                </story-tile>
+                <story-tile
+                    image="images/klangfang-cover.webp"
+                    fallbackImage="images/klangfang-cover.png"
+                    imageAltText="mobile phone displaying a list of sound compositions"
+                    title="Klangfang: the social sound-editor"
+                    description="
+                        Listen, collect sounds, compose together. 
+                        Klangfang is a social sound editor that connects you 
+                        to other people in a special&nbspway.
+                    "
+                    buttonURL="https://klangfangapp.de/"
+                    target="_blank"
+                    buttonLabel="Check out project">
+                </story-tile>
             </div>
         </section>
         <section id="dance">
@@ -158,6 +135,7 @@
     
     <script src="scripts/greetings.js"></script>
     <script src="./components/primary-button.js"></script>
+    <script src="./components/story-tile.js"></script>
 </body>
 
 </html>

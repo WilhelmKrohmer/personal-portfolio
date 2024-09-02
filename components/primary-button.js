@@ -1,16 +1,17 @@
 class PrimaryButton extends HTMLElement {
+
     constructor() {
       super();
       this.attachShadow({ mode: 'open' });
+
     }
 
-    
-  
     connectedCallback() {
 
-        // Get the href & label attribute from the element
+        // Get dynamic attributes from the element
         const href = this.getAttribute('href') || '#';
         const buttonLabel = this.getAttribute('label') || 'Click here';
+        const target = this.getAttribute('target') || '';
 
         this.shadowRoot.innerHTML = `
             <link href="./styles/styles.css" rel="stylesheet" type="text/css">
@@ -49,15 +50,11 @@ class PrimaryButton extends HTMLElement {
                     margin-left: var(--spacing-01);
                 }
 
-                .leading-icon::before {
-                    content: "<--";
-                    margin-right: var(--spacing-01);
-                }
             </style>
             <a 
                 class="body-2-black button trailing-icon" 
                 href="${href}"
-                target="_blank" 
+                target="${target}" 
                 rel="noopener">
                     ${buttonLabel}
             </a>
