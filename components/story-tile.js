@@ -91,9 +91,9 @@ class StoryTile extends HTMLElement {
                     .story-tile-texts {
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: flex-start;
-                        margin-left: 30px;
+                        margin-left: var(--spacing-03);
                     }
 
                     .story-tile:nth-child(2) {
@@ -102,6 +102,7 @@ class StoryTile extends HTMLElement {
 
                     .story-tile img, .story-tile picture {
                         min-width: 250px;
+                        max-width: 280px;
                         margin-bottom: 0;
                     }
 
@@ -116,7 +117,7 @@ class StoryTile extends HTMLElement {
                 </picture>
                 <div class="story-tile-texts">
                     <h3 class="display-3">${title}</h3>
-                    <p class="body-1-short">
+                    <p class="body-2-short">
                         ${description}
                     </p>
                     <primary-button 
