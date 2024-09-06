@@ -14,16 +14,13 @@
     color: var(--semantic-color-content-standard);
     border-radius: var(--semantic-border-radius-medium);
     padding: var(--spacing-04);
-    transition: transform .5s ease;
 }
 
 .info-box-content:hover {
-    transition: transform .125s ease;
     background-color: var(--semantic-color-surface-hovered);
 }
 
 .info-box-content:active {
-    transition: transform .125s ease;
     background-color: var(--semantic-color-surface-pressed);
 }
 
