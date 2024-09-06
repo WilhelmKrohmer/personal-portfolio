@@ -5,8 +5,7 @@
         * Main Tag margins
     * Global component styling
         * Button
-        * Footer
-    * Accessibility
+            * Accessibility
 */
 
 /*BASIC LAYOUT SETTINGS*/
@@ -79,41 +78,6 @@ main {
 .leading-icon::before {
     content: "<--";
     margin-right: var(--spacing-01);
-}
-
-/*Footer*/
-footer {
-    width: 100%;
-    padding: var(--spacing-03) var(--spacing-04);
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Tablet layout */
-@media screen and (min-width: 600px) {
-
-    footer {
-        padding-left: var(--spacing-10);
-        padding-right: var(--spacing-10);
-    }
-
-}
-
-/* Desktop footer layout */
-@media screen and (min-width: 1024px) {
-
-    footer {
-        width: 70%;
-        padding-left: var(--spacing-05);
-        padding-right: var(--spacing-05);
-        margin-left: 30%;
-    }
-
-    footer p {
-        text-align: right;
-    }
 }
 
 /* Accessibility */

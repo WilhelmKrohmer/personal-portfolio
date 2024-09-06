@@ -17,7 +17,7 @@ class InfoBox extends HTMLElement {
         const href = this.getAttribute('href') || '#';
 
         this.shadowRoot.innerHTML = `
-            <link href="./styles/styles.css" rel="stylesheet" type="text/css">
+            <link href="../styles/styles.css" rel="stylesheet" type="text/css">
             <style>
                 .info-box {
                     position: relative;
