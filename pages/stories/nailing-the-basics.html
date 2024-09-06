@@ -15,8 +15,7 @@
     <link href="../../styles/design-tokens.css" rel="stylesheet">
     <link href="../../styles/global.css" rel="stylesheet">
     <link href="../../styles/subpage-header.css" rel="stylesheet">
-    <link href="../../styles/keyfacts.css" rel="stylesheet">
-    <link href="../../styles/story-detail.css" rel="stylesheet">
+    <link href="./story-detail.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
@@ -53,18 +52,11 @@
                     then, sadly is outdated today. As lead app designer I was tasked to join the otelo team to help them reach 
                     their starting goal for 2020: improving their navigation.
                 </p>
-                <dl class="keyfacts">
-                    <dt class="body-2-black">Position</dt>
-                    <dd class="body-1-short">Lead App Designer</dd>
-                    <dt class="body-2-black">Client</dt>
-                    <dd class="body-1-short">otelo</dd>
-                    <dt class="body-2-black">Plattforms</dt>
-                    <dd class="body-1-short">iOS &amp; Android</dd>
-                    <dt class="body-2-black">Responsibilities</dt>
-                    <dd class="body-1-short">Stakeholder management, presentations, wireflows, visual design, icons, QA</dd>
-                    <dt class="body-2-black">Credits</dt>
-                    <dd class="body-1-short">Deepblue Networks, Hanseatics</dd>
-                </dl>
+                <key-facts
+                    client="otelo"
+                    responsibilities="Stakeholder management, presentations, wireflows, visual design, icons, QA"
+                    credits="Deepblue Networks, Hanseatics"
+                ></key-facts>
             </section>
             <section>
                 <h2 class="display-3">The result</h2>
@@ -206,6 +198,7 @@
     <custom-footer></custom-footer>
 
     <script src="../../components/footer.js"></script>
+    <script src="../../components/keyfacts.js"></script>
 </body>
 
 </html>
