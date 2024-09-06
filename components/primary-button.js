@@ -21,7 +21,7 @@ class PrimaryButton extends HTMLElement {
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between; /* Adjust layout when button is stretched */
-                    padding: var(--spacing-02) var(--spacing-03);
+                    padding: var(--spacing-03) var(--spacing-04);
                     background-color: var(--semantic-color-surface-highlight-enabled);
                     color: var(--semantic-color-content-inverse);
                     border-radius: var(--semantic-border-radius-medium);
@@ -39,10 +39,13 @@ class PrimaryButton extends HTMLElement {
                     background-color: var(--semantic-color-surface-highlight-pressed);
                 }
 
-                .button:focus{
+                .button:focus-visible{
                     transition: transform .125s ease;
                     background-color: var(--semantic-color-surface-highlight-focussed);
-                    border-width: var(--semantic-border-strength-max) solid var(--semantic-color-border-standard);
+                    outline-style: solid;
+                    outline-width: var(--semantic-border-strength-max);
+                    outline-color: var(--semantic-color-border-standard);
+                    box-shadow: inset 0 0 0 2px var(--semantic-color-border-inverse);
                 }
 
                 .trailing-icon::after {

@@ -94,10 +94,11 @@
     --semantic-color-surface-highlight-hovered: var(--core-color-purple-50);
     --semantic-color-surface-highlight-pressed: var(--core-color-purple-35);
     --semantic-color-surface-highlight-focussed: var(--core-color-purple-50);
+
     --semantic-color-surface-onContrast-enabled: var(--core-color-translucence-0);
-    --semantic-color-surface-onContrast-hovered: var(--core-color-purple-60);
+    --semantic-color-surface-onContrast-hovered: var(--core-color-purple-50);
     --semantic-color-surface-onContrast-selected: var(--core-color-purple-50);
-    --semantic-color-surface-onContrast-pressed: var(--core-color-purple-50);
+    --semantic-color-surface-onContrast-pressed: var(--core-color-purple-60);
     --semantic-color-surface-onContrast-focussed: var(--core-color-purple-50);
 
     --semantic-color-content-standard: var(--core-color-purple-10);

@@ -24,13 +24,21 @@
 
 <body>
     <header class="welcome-header">
-        <h1 class="welcome-text">Buenos días!</h1>
-        <p class="welcome-description">My name is Wilhelm Krohmer.
-            I <a class="link" href="#stories">design</a>,
-            <a class="link" href="#dance">dance</a>,
-            <a class="link" href="https://github.com/WilhelmKrohmer" target="_blank" rel="noopener">code</a> &#38;
-            <a class="link" href="https://wilhelmkrohmer.tumblr.com/" target="_blank" rel="noopener">observe</a>.
-        </p>
+        <div>
+            <h1 class="welcome-title">Buenos días!</h1>
+            <p class="body-1-short welcome-subtitle">
+                My name is Wilhelm Krohmer. I design, dance, code and&nbspobserve.
+            </p>
+        </div>
+        <nav aria-labelledby="primary-navigation" class="body-2-black">
+            <ul>
+                <li><a class="menu-item" href="#stories">Stories</a></li>
+                <li><a class="menu-item" href="#dance">Dance</a></li>
+                <li><a class="menu-item" href="https://github.com/WilhelmKrohmer" target="_blank" rel="noopener">Coding</a></li>
+                <li><a class="menu-item" href="https://wilhelmkrohmer.tumblr.com/" target="_blank" rel="noopener">Photography</a><li>
+                <li><a class="menu-item" href="#about">About me</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
@@ -131,6 +139,7 @@
     <script src="./components/primary-button.js"></script>
     <script src="./components/story-tile.js"></script>
     <script src="./components/footer.js"></script>
+    <script src="./scripts/menu-item-selector.js"></script>
 </body>
 
 </html>
