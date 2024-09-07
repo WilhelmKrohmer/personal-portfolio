@@ -26,12 +26,11 @@ class PrimaryButton extends HTMLElement {
                     color: var(--semantic-color-content-inverse);
                     border-radius: var(--semantic-border-radius-medium);
                     border-width: var(--semantic-border-strength-none) solid var(--semantic-color-border-standard);
-                    will-change: transform;
-                    transition: transform .5s ease;
+                    transition: all .125s ease;
                 }
 
                 .button:hover {
-                    transition: transform .125s ease;
+                    transition: all .125s ease;
                     background-color: var(--semantic-color-surface-highlight-hovered);
                 }
 
@@ -40,7 +39,6 @@ class PrimaryButton extends HTMLElement {
                 }
 
                 .button:focus-visible{
-                    transition: transform .125s ease;
                     background-color: var(--semantic-color-surface-highlight-focussed);
                     outline-style: solid;
                     outline-width: var(--semantic-border-strength-max);

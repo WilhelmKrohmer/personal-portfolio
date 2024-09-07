@@ -76,10 +76,16 @@
     background-color: var(--semantic-color-surface-onContrast-enabled);
     color: var(--semantic-color-content-inverse);
     border-radius: var(--semantic-border-radius-medium);
+    transition: all .125s ease;
     
 }
 
+.menu-selected {
+    background-color: var(--semantic-color-surface-onContrast-selected);
+}
+
 .menu-item:hover {
+    transition: all .125s ease;
     background-color: var(--semantic-color-surface-onContrast-hovered);
 }
 
@@ -88,13 +94,12 @@
 }
 
 .menu-item:focus-visible {
+    transition: all .125s ease;
     background-color: var(--semantic-color-surface-onContrast-focussed);
     outline-style: solid;
     outline-width: var(--semantic-border-strength-max);
     outline-color: var(--semantic-color-border-inverse);
 }
-
-
 
 /* Tablet layout */
 @media screen and (min-width: 600px) {
