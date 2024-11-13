@@ -11,11 +11,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="referrer" content="no-referrer">
     
-    <link href="styles/styles.css" rel="stylesheet">
-    <link href="styles/design-tokens.css" rel="stylesheet">
-    <link href="styles/global.css" rel="stylesheet">
-    <link href="styles/welcome-header.css" rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/design-tokens.css" rel="stylesheet">
+    <link href="./styles/global.css" rel="stylesheet">
+    <link href="./styles/welcome-header.css" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -30,19 +30,16 @@
                 My name is Wilhelm Krohmer. I design, dance, code and&nbspobserve.
             </p>
         </div>
-        <nav aria-labelledby="primary-navigation" class="body-2-black navigation">
-            <ul>
-                <li><a class="menu-item menu-selected" href="#stories">Stories</a></li>
-                <li><a class="menu-item" href="#dance">Dance</a></li>
-                <li><a class="menu-item" href="https://github.com/WilhelmKrohmer" target="_blank" rel="noopener">Coding</a></li>
-                <li><a class="menu-item" href="https://wilhelmkrohmer.tumblr.com/" target="_blank" rel="noopener">Photography</a><li>
-                <li><a class="menu-item" href="#about">About me</a></li>
-            </ul>
-        </nav>
+        <page-menu class="navigation">
+            <menu-item slot="slot-1" selected="selected" href="#stories" label="Stories"></menu-item>
+            <menu-item slot="slot-2" selected="" href="#dance" label="Dance"></menu-item>
+            <menu-item slot="slot-3" selected="" href="https://github.com/WilhelmKrohmer" label="Coding" target="_blank"></menu-item>
+            <menu-item slot="slot-4" selected="" href="https://wilhelmkrohmer.tumblr.com/" label="Photography" target="_blank"></menu-item>
+            <menu-item slot="slot-5" selected="" href="#about" label="About me"></menu-item>
+        </page-menu>
     </header>
     
     <main>
-        
         <section id="stories">
             <h2 class="display-2">Stories</h2>
             <div class="stories-list">
@@ -57,8 +54,7 @@
                         Joining the otelo app team I redesigned their navigation, 
                         improving the overall app architecture in the&nbspprocess.
                     "
-                    buttonURL="./pages/stories/nailing-the-basics.html"
-                    buttonLabel="Read this story">
+                    buttonURL="./pages/stories/nailing-the-basics.html">
                 </story-tile>
                 <story-tile
                     image="./pages/stories/images/finding-the-right-product-fast-1/soliver-cover-finding-the-right-product-fast-1.webp"
@@ -71,8 +67,7 @@
                         their desired product faster, I redesigned s.Oliver's 
                         search and&nbspcategories.
                     "
-                    buttonURL="./pages/stories/finding-the-right-product-fast-1.html"
-                    buttonLabel="Read this story">
+                    buttonURL="./pages/stories/finding-the-right-product-fast-1.html">
                 </story-tile>
                 <story-tile
                     image="./pages/stories/images/finding-the-right-product-fast-2/soliver-cover-finding-the-right-product-fast-2.webp"
@@ -84,8 +79,7 @@
                         I redesigned s.Oliver's product list helping customers decide which 
                         product really deserves their&nbspattention.
                     "
-                    buttonURL="./pages/stories/finding-the-right-product-fast-2.html"
-                    buttonLabel="Read this story">
+                    buttonURL="./pages/stories/finding-the-right-product-fast-2.html">
                 </story-tile>
                 <story-tile
                     image="images/klangfang-cover.webp"
@@ -133,14 +127,15 @@
             </primary-button>
         </section>
     </main>
+
     <custom-footer></custom-footer>
     
-    <script src="scripts/greetings.js"></script>
+    <script src="./scripts/greetings.js"></script>
     <script src="./components/primary-button.js"></script>
     <script src="./components/story-tile.js"></script>
     <script src="./components/footer.js"></script>
-    <!--<script src="./scripts/menu-item-selector.js"></script>-->
-    <script src="./scripts/menu-item-selector-2.js"></script>
+    <script src="./components/menu-item.js"></script>
+    <script src="./components/page-menu.js"></script>
 </body>
 
 </html>

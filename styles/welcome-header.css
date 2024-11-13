@@ -52,55 +52,6 @@
     color: var(--semantic-color-content-inverse);
 }
 
-.welcome-header nav {
-    padding: 0;
-}
-
-.welcome-header ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.welcome-header li {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-item {
-    margin: 0;
-    text-decoration: none;
-    padding-inline: var(--spacing-03);
-    padding-block: var(--spacing-02);
-    background-color: var(--semantic-color-surface-onContrast-enabled);
-    color: var(--semantic-color-content-inverse);
-    border-radius: var(--semantic-border-radius-medium);
-    transition: all .125s ease;
-    
-}
-
-.menu-selected {
-    background-color: var(--semantic-color-surface-onContrast-selected);
-}
-
-.menu-item:hover {
-    transition: all .125s ease;
-    background-color: var(--semantic-color-surface-onContrast-hovered);
-}
-
-.menu-item:active {
-    background-color: var(--semantic-color-surface-onContrast-pressed);
-}
-
-.menu-item:focus-visible {
-    transition: all .125s ease;
-    background-color: var(--semantic-color-surface-onContrast-focussed);
-    outline-style: solid;
-    outline-width: var(--semantic-border-strength-max);
-    outline-color: var(--semantic-color-border-inverse);
-}
-
 /* Tablet layout */
 @media screen and (min-width: 600px) {
 

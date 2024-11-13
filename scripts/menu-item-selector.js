@@ -1,41 +1,33 @@
-//const anchor = document.getElementById("test");
-//console.log(anchor.hash);
+// Credits: Fork from khuongyolo, see: https://gist.github.com/khuongyolo/4e7d8308c01733961f7ad0c9964db591
 
-const menuItem = document.getElementsByClassName("menu-item");
-//console.log(menuItem);
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
 
+// Add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
 
-for (let i = 0; i < menuItem.length; i++) {
-
-    //console.log(menuItem[i]);
-
-    menuItem[i].addEventListener('click', function() {
-
-        if (menuItem[i].classList.contains('menu-selected')) {
-            menuItem[i].classList.remove('menu-selected');
-            menuItem[i].classList.add('menu-selected');
-        } else {
-            menuItem[i].classList.add('menu-selected')
-        }
-        
-    });
-
-}
-
-/* 
-    Click Event Listener -> Guckt in die URL, liest hash aus, entfernt und fügt "selected" class hinzu
-    Scroll Event Listener (nice to have?) -> Throttlen
-*/
-
-//document.getElementById(hash).style.backgroundColor="Yellow";
-
-/*
-window.addEventListener("hashchange", () => {
-    let hash = window.location.hash;
-    if (hash) {
-        let linkClass = document.querySelectorAll(".menu-item");
-        linkClass.forEach(x => x.classList.remove("active"))
-        document.querySelector('a[href="' + hash + '"]').classList.add("active");
+function navHighlighter() {
+  
+  // Get current scroll position
+  let scrollY = window.scrollY;
+  
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = (current.getBoundingClientRect().top + window.scrollY) - window.innerHeight/2;
+    const sectionId = current.getAttribute("id");
+    
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("menu-selected");
+    } else {
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("menu-selected");
     }
-}); */
-
+  });
+}

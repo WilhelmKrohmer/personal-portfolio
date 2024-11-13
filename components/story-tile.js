@@ -14,7 +14,7 @@ class StoryTile extends HTMLElement {
         const description = this.getAttribute('description') || 'This is a description';
         const buttonURL = this.getAttribute('buttonURL') || '#';
         const target = this.getAttribute('target') || '';
-        const buttonLabel = this.getAttribute('buttonLabel') || '';
+        const buttonLabel = this.getAttribute('buttonLabel') || 'Read this story';
 
         this.shadowRoot.innerHTML = `
 
