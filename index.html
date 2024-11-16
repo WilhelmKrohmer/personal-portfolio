@@ -11,11 +11,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="referrer" content="no-referrer">
     
-    <link href="./styles/styles.css" rel="stylesheet">
-    <link href="./styles/design-tokens.css" rel="stylesheet">
-    <link href="./styles/global.css" rel="stylesheet">
-    <link href="./styles/welcome-header.css" rel="stylesheet">
-    <link href="./styles/index.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/design-tokens.css" rel="stylesheet">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/welcome-header.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
     
     <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -31,17 +31,17 @@
             </p>
         </div>
         <page-menu class="navigation">
-            <menu-item slot="slot-1" selected="selected" href="#stories" label="Stories"></menu-item>
-            <menu-item slot="slot-2" selected="" href="#dance" label="Dance"></menu-item>
-            <menu-item slot="slot-3" selected="" href="https://github.com/WilhelmKrohmer" label="Coding" target="_blank"></menu-item>
-            <menu-item slot="slot-4" selected="" href="https://wilhelmkrohmer.tumblr.com/" label="Photography" target="_blank"></menu-item>
-            <menu-item slot="slot-5" selected="" href="#about" label="About me"></menu-item>
+            <menu-item slot="slot-1" is-selected="selected" href="#stories" label="Stories"></menu-item>
+            <menu-item slot="slot-2" href="#dance" label="Dance"></menu-item>
+            <menu-item slot="slot-3" href="https://github.com/WilhelmKrohmer" label="Coding" target="_blank"></menu-item>
+            <menu-item slot="slot-4" href="https://wilhelmkrohmer.tumblr.com/" label="Photography" target="_blank"></menu-item>
+            <menu-item slot="slot-5" href="#about" label="About me"></menu-item>
         </page-menu>
     </header>
-    
     <main>
         <section id="stories">
             <h2 class="display-2">Stories</h2>
+            <p class="body-1-short subtitle">All things digital & product design</p>
             <div class="stories-list">
                 <story-tile
                     image="./pages/stories/images/nailing-the-basics/otelo-cover-nailing-the-basics.webp"

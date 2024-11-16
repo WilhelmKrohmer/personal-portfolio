@@ -24,26 +24,26 @@
 
 <body>
     <header class="subpage-header">
-        <nav>
-            <a class="body-2-black button" 
+        <div>
+            <a  class="body-2-black button" 
                 href="../../index.html">
                 <span class="button-background leading-icon">
                     Back
                 </span>
             </a>
-            <page-menu class="navigation">
-                <menu-item isSelected="true" slot="slot-1" href="#introduction" label="Introduction"></menu-item>
-                <menu-item slot="slot-2" href="#result" label="The result"></menu-item>
-                <menu-item slot="slot-3" href="#before" label="The before"></menu-item>
-                <menu-item slot="slot-4" href="#after" label="The after"></menu-item>
-                <menu-item slot="slot-5" href="#lessons-learned" label="Lessons learned"></menu-item>
-            </page-menu>
-        </nav>
+        </div>
+        <page-menu class="navigation">
+            <menu-item slot="slot-1" is-selected="selected" href="#introduction" label="Introduction"></menu-item>
+            <menu-item slot="slot-2" href="#result" label="The result"></menu-item>
+            <menu-item slot="slot-3" href="#before" label="The before"></menu-item>
+            <menu-item slot="slot-4" href="#after" label="The after"></menu-item>
+            <menu-item slot="slot-5" href="#lessons-learned" label="Lessons learned"></menu-item>
+        </page-menu>
     </header>
     <main>
         <article>
-            <section>
-                <h1 id="introduction" class="display-1">Nailing the basics: mobile navigation</h1>
+            <section id="introduction">
+                <h1 class="display-1">Nailing the basics: mobile navigation</h1>
                 <p class="body-1-long">
                     With increasing complexity of mobile apps, having a simple 
                     navigation has never been more important. Nevertheless
@@ -65,8 +65,8 @@
                     credits="Deepblue Networks, Hanseatics"
                 ></key-facts>
             </section>
-            <section>
-                <h2 id="result" class="display-3">The result</h2>
+            <section id="result">
+                <h2 class="display-3">The result</h2>
                 <picture>
                     <source type="image/webp" srcset="./images/nailing-the-basics/otelo-result.webp">
                     <img src="./images/nailing-the-basics/otelo-result.png" 
@@ -80,8 +80,8 @@
                     they also solved a lot of issues.
                 </p>
             </section>
-            <section>
-                <h2 id="before" class="display-3">Let&#39;s have a look at the before</h2>
+            <section id="before">
+                <h2 class="display-3">Let&#39;s have a look at the before</h2>
                 <picture>
                     <source type="image/webp" srcset="./images/nailing-the-basics/otelo-before.webp">
                     <img src="./images/nailing-the-basics/otelo-before.png" 
@@ -143,8 +143,8 @@
                     just going back one screen at a time.
                 </p>
             </section>
-            <section>
-                <h2 id="after" class="display-3">Fortunately there&#39;s a simple solution</h2>
+            <section id="after">
+                <h2 class="display-3">Fortunately there&#39;s a simple solution</h2>
                 <picture>
                     <source type="image/webp" srcset="./images/nailing-the-basics/otelo-after.webp">
                     <img src="./images/nailing-the-basics/otelo-after.png" 
@@ -183,8 +183,8 @@
                     
                 </ul>
             </section>
-            <section>
-                <h2 id="lessons-learned" class="display-3">Lessons learned</h2>
+            <section id="lessons-learned">
+                <h2 class="display-3">Lessons learned</h2>
                 <p class="body-1-long">
                     Nailing the basics with mobile navigation might seem like an easy task. Just put the menu at the bottom, right?
                     Not so fast — changing the main navigation of an existing app almost always goes with changing the whole app

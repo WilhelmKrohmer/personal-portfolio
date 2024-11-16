@@ -193,24 +193,3 @@ figcaption {
     font-style: oblique 10deg;
     color: var(--semantic-color-content-subtle);
 }
-
-.headline-divider {
-    margin-top: var(--spacing-06);
-    margin-bottom: var(--spacing-04);
-}
-
-.headline-divider::after {
-    content: "";
-    display: block;
-    width: calc(100% + var(--margin-main-horizontal));
-    padding-top: var(--spacing-03);
-    border-bottom: var(--semantic-border-strength-subtle) solid var(--semantic-color-border-standard);
-}
-
-/* Desktop headline divider */
-@media screen and (min-width: 1024px) {
-
-    .headline-divider::after {
-        width: 100%;
-    }
-}

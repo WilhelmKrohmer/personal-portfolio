@@ -40,6 +40,7 @@ video {
     }
 
     section {
+        padding-block: 50px;
         max-width: 708px;
         width: 100%;
     }

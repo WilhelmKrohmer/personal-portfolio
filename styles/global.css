@@ -24,6 +24,7 @@ main {
     margin-left: var(--margin-main-horizontal);
     margin-right: var(--margin-main-horizontal);
     margin-bottom: var(--margin-main-vertical);
+    padding-bottom: var(--margin-main-vertical);
 }
 
 /* Main margins for tablet */
