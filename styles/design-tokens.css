@@ -7,6 +7,7 @@
      * Shape
      * Padding
      * Gap
+     * Breakpoints
 */
 
 :root {
@@ -121,14 +122,19 @@
     --semantic-border-radius-extreme: var(--core-grid-05);
     --semantic-border-radius-round: 99px;
     
-    --semantic-border-strength-none: 0;
-    --semantic-border-strength-subtle: .5;
-    --semantic-border-strength-medium: 1;
-    --semantic-border-strength-strong: 1.5;
-    --semantic-border-strength-extreme: 2;
-    --semantic-border-strength-max: 3;
+    --semantic-border-strength-none: 0px;
+    --semantic-border-strength-subtle: .5px;
+    --semantic-border-strength-medium: 1px;
+    --semantic-border-strength-strong: 1.5px;
+    --semantic-border-strength-extreme: 2px;
+    --semantic-border-strength-max: 3px;
 
     /* Padding */
 
     /* Gap */
+
+    /* Breakpoints */
+    --breakpoint-page-tablet: 700px;
+    --breakpoint-page-desktop-normal: 1024px;
+    --breakpoint-page-desktop-wide: 1200px;
 }

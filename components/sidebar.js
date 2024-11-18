@@ -4,4 +4,4 @@
 
 // 1. Container layout
 // 2. Slot für header content
-// 3. Menü mit Icons (optional) und Label
+// 3. Slot für menü

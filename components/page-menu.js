@@ -18,15 +18,36 @@ class PageMenu extends HTMLElement {
         this.shadowRoot.innerHTML = `
           <style>
 
-            ul {
-              padding: 0;
-              margin: 0;
+            :host {
+              display: block;
+              padding-block: var(--semantic-border-strength-max);
+              padding-inline: 0;
             }
 
-            ul li {
+            ul {
               display: flex;
+              padding-block: 0;
+              padding-inline: var(--spacing-04);
+              margin: 0;
               list-style: none;
+              overflow-x: scroll;
+              -ms-overflow-style: none; /* IE, Edge */
+              scrollbar-width: none; /* Firefox */
             }
+
+            ul::-webkit-scrollbar {
+              display: none;
+            }
+
+            @media screen and (min-width: 1024px) {
+
+              ul {
+                display: flex;
+              }
+
+            }
+
+            
           
           </style>
           <nav aria-labelledby="primary-navigation">

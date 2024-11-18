@@ -15,9 +15,13 @@ class MenuItem extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <link href="styles/styles.css" rel="stylesheet" type="text/css">
-            <style>          
+            <style>
+                :host {
+                    display: block;
+                }
+
                 .menu-item {
-                    display: flex;
+                    display: block;
                     text-decoration: none;
                     padding-inline: var(--spacing-03);
                     padding-block: var(--spacing-02);
