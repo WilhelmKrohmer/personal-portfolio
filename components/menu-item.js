@@ -17,7 +17,7 @@ class MenuItem extends HTMLElement {
             <link href="styles/styles.css" rel="stylesheet" type="text/css">
             <style>
                 :host {
-                    display: block;
+                    display: flex;
                 }
 
                 .menu-item {

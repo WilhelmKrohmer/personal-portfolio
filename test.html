@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wilhelm Krohmer | Digital Product Designer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wilhelm Krohmer | Digital Product Designer">
+    <meta name="author" content="Wilhelm Krohmer">
+    <meta name="theme-color" content="#4332FD" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer">
+    
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/design-tokens.css" rel="stylesheet">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/welcome-header.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="apple-touch-icon.png">
+</head>
+<body>
+    <side-bar>
+        <div slot="header" class="greetings-container">
+            <h1 class="welcome-title">Buenos días!</h1>
+            <p class="body-1-short welcome-subtitle">
+                My name is Wilhelm Krohmer. I design, dance, code and&nbspobserve.
+            </p>
+        </div>
+        <page-menu slot="footer" class="navigation">
+            <menu-item slot="slot-1" is-selected="selected" href="#stories" label="Stories"></menu-item>
+            <menu-item slot="slot-2" href="#dance" label="Dance"></menu-item>
+            <menu-item slot="slot-3" href="https://github.com/WilhelmKrohmer" label="Coding" target="_blank"></menu-item>
+            <menu-item slot="slot-4" href="https://wilhelmkrohmer.tumblr.com/" label="Photography" target="_blank"></menu-item>
+            <menu-item slot="slot-5" href="#about" label="About&nbsp;me"></menu-item>
+        </page-menu>
+    </side-bar>
+    
+    <script src="./components/sidebar.js"></script>
+    <script src="./scripts/greetings.js"></script>
+    <script src="./components/primary-button.js"></script>
+    <script src="./components/story-tile.js"></script>
+    <script src="./components/footer.js"></script>
+    <script src="./components/menu-item.js"></script>
+    <script src="./components/page-menu.js"></script>
+</body>
+
+</html>

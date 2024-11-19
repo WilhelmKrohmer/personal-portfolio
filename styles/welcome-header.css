@@ -1,21 +1,9 @@
-/*Mobile Layout*/
-
-.welcome-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 66vh;
-    padding-top: var(--spacing-04);
-    padding-bottom: var(--spacing-06);
-    background-color: var(--semantic-color-surface-contrast);
-}
+/*Greeting on homepage*/
 
 .greetings-container {
-    padding-inline: var(--spacing-04);
+    margin-bottom: 27vh;
 }
 
-/*Greeting on homepage*/
 .welcome-title {
     font-family: 'Mikro', 'Inter var', sans-serif;
     font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'ordn' on, 'ss02' on, 'ss03' on;
@@ -54,18 +42,6 @@
     color: var(--semantic-color-content-inverse);
 }
 
-/* Tablet layout */
-@media screen and (min-width: 600px) {
-
-    .welcome-header {
-        padding-top: var(--spacing-08);
-        padding-bottom: var(--spacing-08);
-        padding-left: var(--spacing-06);
-        padding-right: var(--spacing-06);
-    }
-
-}
-
 /* Desktop layout */
 @media screen and (min-width: 1024px) {
 
@@ -90,14 +66,4 @@
         }
         
     }
-
-    .welcome-header {
-        position: fixed;
-        width: 30%;
-        max-width: 432px;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-
 }

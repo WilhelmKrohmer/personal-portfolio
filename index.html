@@ -23,21 +23,21 @@
 </head>
 
 <body>
-    <header class="welcome-header">
-        <div class="greetings-container">
+    <side-bar>
+        <div slot="header" class="greetings-container">
             <h1 class="welcome-title">Buenos días!</h1>
             <p class="body-1-short welcome-subtitle">
-                My name is Wilhelm Krohmer. I design, dance, code and&nbspobserve.
+                My name is Wilhelm Krohmer. I design, dance, code and&nbsp;observe.
             </p>
         </div>
-        <page-menu class="navigation">
+        <page-menu slot="footer" class="navigation">
             <menu-item slot="slot-1" is-selected="selected" href="#stories" label="Stories"></menu-item>
             <menu-item slot="slot-2" href="#dance" label="Dance"></menu-item>
             <menu-item slot="slot-3" href="https://github.com/WilhelmKrohmer" label="Coding" target="_blank"></menu-item>
             <menu-item slot="slot-4" href="https://wilhelmkrohmer.tumblr.com/" label="Photography" target="_blank"></menu-item>
             <menu-item slot="slot-5" href="#about" label="About&nbsp;me"></menu-item>
         </page-menu>
-    </header>
+    </side-bar>
     <main>
         <section id="stories">
             <h2 class="display-2">Stories</h2>
@@ -130,6 +130,7 @@
 
     <custom-footer></custom-footer>
     
+    <script src="./components/sidebar.js"></script>
     <script src="./scripts/greetings.js"></script>
     <script src="./components/primary-button.js"></script>
     <script src="./components/story-tile.js"></script>

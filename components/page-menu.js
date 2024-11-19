@@ -20,13 +20,12 @@ class PageMenu extends HTMLElement {
 
             :host {
               display: block;
-              padding-block: var(--semantic-border-strength-max);
               padding-inline: 0;
             }
 
             ul {
               display: flex;
-              padding-block: 0;
+              padding-block: var(--semantic-border-strength-max);
               padding-inline: var(--spacing-04);
               margin: 0;
               list-style: none;
@@ -42,7 +41,8 @@ class PageMenu extends HTMLElement {
             @media screen and (min-width: 1024px) {
 
               ul {
-                display: flex;
+                flex-direction: column;
+                
               }
 
             }
@@ -67,10 +67,20 @@ class PageMenu extends HTMLElement {
       const sections = document.querySelectorAll("section[id]");
 
       // Add an event listener listening for scroll
-      window.addEventListener("scroll", navHighlighter);
+      window.addEventListener("scroll", throttle(navHighlighter, 200));
+
+      function throttle(fn, wait) {
+        var time = Date.now();
+        return function() {
+          if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
+          }
+        }
+      }
 
       function navHighlighter() {
-  
+        
         // Get current scroll position
         let scrollY = window.scrollY;
         

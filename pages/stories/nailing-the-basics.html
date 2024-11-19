@@ -23,23 +23,20 @@
 </head>
 
 <body>
-    <header class="subpage-header">
-        <div>
-            <a  class="body-2-black button" 
-                href="../../index.html">
-                <span class="button-background leading-icon">
-                    Back
-                </span>
-            </a>
-        </div>
-        <page-menu class="navigation">
+    <side-bar>
+        <menu-item
+            slot="header"
+            href="../../index.html"
+            label="Home"
+        ></menu-item>
+        <page-menu slot="footer" class="navigation">
             <menu-item slot="slot-1" is-selected="selected" href="#introduction" label="Introduction"></menu-item>
-            <menu-item slot="slot-2" href="#result" label="The result"></menu-item>
-            <menu-item slot="slot-3" href="#before" label="The before"></menu-item>
-            <menu-item slot="slot-4" href="#after" label="The after"></menu-item>
-            <menu-item slot="slot-5" href="#lessons-learned" label="Lessons learned"></menu-item>
+            <menu-item slot="slot-2" href="#result" label="The&nbsp;result"></menu-item>
+            <menu-item slot="slot-3" href="#before" label="The&nbsp;before"></menu-item>
+            <menu-item slot="slot-4" href="#after" label="The&nbsp;after"></menu-item>
+            <menu-item slot="slot-5" href="#lessons-learned" label="Lessons&nbsp;learned"></menu-item>
         </page-menu>
-    </header>
+    </side-bar>
     <main>
         <article>
             <section id="introduction">
@@ -105,15 +102,15 @@
                     bottom right.
                 </p>
                 <p class="body-1-long">There were several problems with that:</p>
-                <h4 class="display-4 headline-divider">Scattered navigation</h4>
+                <h4 class="display-4">Scattered navigation</h4>
                 <p class="body-1-long">You really have to make the effort to discover what areas there are.</p>
-                <h4 class="display-4 headline-divider">Cluttered screen</h4>
+                <h4 class="display-4">Cluttered screen</h4>
                 <p class="body-1-long">
                     There are different elements everywhere. Even though status and tariff are the most important areas, their design
                     is very subtle. On the other hand the other three areas are very dominant. Especially the orange floating action
                     button takes away focus and looks like the primary action of the screen, even though it&#39;s not.
                 </p>
-                <h4 class="display-4 headline-divider">Unclear interactions</h4>
+                <h4 class="display-4">Unclear interactions</h4>
                 <p class="body-1-long">
                     Status and tariff look like they are just text elements. While subtle design is good, for inexperienced users
                     they may not even seem clickable. Also a lot of people don&#39;t know tabs can often be navigated by swiping.
@@ -122,19 +119,19 @@
                     The orange button is just labeled with a question mark. It may be unclear what the button would do when tapped.
                     Will it open tutorials or an FAQ? Maybe a contact form or chat?
                 </p>
-                <h4 class="display-4 headline-divider">Growing mobile device sizes</h4>
+                <h4 class="display-4">Growing mobile device sizes</h4>
                 <p class="body-1-long">
                     Four of five elements are positioned almost at the top of the screen. On big mobile devices they are really hard
                     to reach.
                 </p>
-                <h4 class="display-4 headline-divider">No text labels for icons</h4>
+                <h4 class="display-4">No text labels for icons</h4>
                 <p class="body-1-long">
                     Icons are awesome to have because they help to understand the UI no matter what language a person speaks.
                     Nevertheless using icons without accompanying text, or in this case, an avatar or a question mark, is not enough
                     to explain what lies behind those elements. Text labels are extremely helpful for understanding the meaning
                     behind icons.
                 </p>
-                <h4 class="display-4 headline-divider">Misused modality</h4>
+                <h4 class="display-4">Misused modality</h4>
                 <p class="body-1-long">
                     Account, messages and services are all opened in fullscreen modal views, which should only be used for
                     self-contained tasks with a fixed start and end and require an explicit action to exit. Using modal views here
@@ -208,6 +205,7 @@
     <script src="../../components/keyfacts.js"></script>
     <script src="../../components/page-menu.js"></script>
     <script src="../../components/menu-item.js"></script>
+    <script src="../../components/sidebar.js"></script>
 </body>
 
 </html>

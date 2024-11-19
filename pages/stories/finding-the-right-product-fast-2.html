@@ -23,19 +23,23 @@
 </head>
 
 <body>
-    <header class="subpage-header">
-        <nav>
-            <a class="body-2-black button" 
-                href="../../index.html">
-                <span class="button-background leading-icon">
-                    Back
-                </span>
-            </a>
-        </nav>
-    </header>
+    <side-bar>
+        <menu-item
+            slot="header"
+            href="../../index.html"
+            label="Home"
+        ></menu-item>
+        <page-menu slot="footer" class="navigation">
+            <menu-item slot="slot-1" is-selected="selected" href="#introduction" label="Introduction"></menu-item>
+            <menu-item slot="slot-2" href="#result" label="The&nbsp;result"></menu-item>
+            <menu-item slot="slot-3" href="#before" label="The&nbsp;before"></menu-item>
+            <menu-item slot="slot-4" href="#after" label="The&nbsp;after"></menu-item>
+            <menu-item slot="slot-5" href="#lessons-learned" label="Lessons&nbsp;learned"></menu-item>
+        </page-menu>
+    </side-bar>
     <main>
         <article>
-            <section>
+            <section id="introduction">
                 <h1 class="display-1">Finding the right product (fast) — part 2</h1>
                 <info-box href="finding-the-right-product-fast-1.html">
                     This is a continuation of my first article
@@ -59,7 +63,7 @@
                     client="s.Oliver"
                 ></key-facts>
             </section>
-            <section>
+            <section id="result">
                 <h1 class="display-3">A sneak peak of the end result</h1>
                 <picture>
                     <source type="image/webp" srcset="./images/finding-the-right-product-fast-2/soliver-result.webp">
@@ -73,8 +77,6 @@
                     material. Quickfilters and clear access to sorting and filters
                     help with narrowing down the list.
                 </p>
-            </section>
-            <section>
                 <h1 class="display-3">So what&#39;s the deal with lists?</h1>
                 <p class="body-1-long">All lists share some basic common characteristics:</p>
                 <ul>
@@ -117,7 +119,7 @@
                     multiple products is limited.
                 </p>
             </section>
-            <section>
+            <section id="before">
                 <h1 class="display-3">The old product list</h1>
                 <picture>
                     <source type="image/webp" srcset="./images/finding-the-right-product-fast-2/soliver-before.webp">
@@ -171,8 +173,6 @@
                         quantity)
                     </li>
                 </ul>
-            </section>
-            <section>
                 <h1 class="display-3">The unknowns</h1>
                 <p class="body-1-long">
                     Improving all problems mentioned above would be a good step in the right direction. But when working
@@ -187,7 +187,7 @@
                     figure out what was actually important to our customers.
                 </p>
             </section>
-            <section>
+            <section id="after">
                 <h1 class="display-3">Our goals</h1>
                 <p class="body-1-long">These were our main goals for this project:</p>
                 <ul>
@@ -290,7 +290,7 @@
                     Sorry, your browser doesn't support embedded videos.
                 </video>
             </section>
-            <section>
+            <section id="lessons-learned">
                 <h1 class="display-3">Lessons learned</h1>
                 <p class="body-1-long">With the new product list, we found a way to increase usability and product relevance for our
                     customers. It was exciting to find out about what really matters to them through our research. It
@@ -312,6 +312,9 @@
     <script src="../../components/footer.js"></script>
     <script src="../../components/info-box.js"></script>
     <script src="../../components/keyfacts.js"></script>
+    <script src="../../components/page-menu.js"></script>
+    <script src="../../components/menu-item.js"></script>
+    <script src="../../components/sidebar.js"></script>
 </body>
 
 </html>
